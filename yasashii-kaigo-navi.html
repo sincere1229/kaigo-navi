@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>やさしい介護ナビ｜突然の介護に悩む家族へ、一緒に整理しましょう</title>
+<meta name="description" content="突然始まる介護で不安な家族へ。介護度・状況・悩みから、今できることをAIと一緒に整理します。介護グッズ・制度・施設・8050問題まで幅広くサポート。登録不要・無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #2d7a5f;
+  --green-light: #e8f5f0;
+  --green-mid: #4a9e80;
+  --green-dark: #1a5c44;
+  --amber: #c8833a;
+  --amber-light: #fdf3e7;
+  --text: #2c2c2c;
+  --text-sub: #666;
+  --text-light: #999;
+  --bg: #fafaf8;
+  --white: #fff;
+  --border: #e5e5e0;
+  --radius: 12px;
+  --shadow: rgba(45,122,95,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text);background:var(--bg);line-height:1.8}
+
+/* HEADER */
+header{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--green-dark);font-weight:600;text-decoration:none}
+.logo span{font-size:12px;display:block;color:var(--text-sub);font-weight:300;font-family:'Noto Sans JP',sans-serif;margin-top:-2px}
+nav{display:flex;gap:20px;font-size:13px}
+nav a{color:var(--text-sub);text-decoration:none}
+nav a:hover{color:var(--green)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#f0f8f4 0%,#fafaf8 60%,#fdf3e7 100%);padding:60px 24px 48px;text-align:center}
+.hero-badge{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:12px;padding:4px 14px;border-radius:20px;margin-bottom:16px;border:1px solid rgba(45,122,95,0.2)}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,34px);font-weight:600;color:var(--green-dark);line-height:1.5;margin-bottom:16px}
+.hero p{font-size:15px;color:var(--text-sub);max-width:560px;margin:0 auto 32px;line-height:2}
+
+/* AI CHAT AREA */
+.ai-section{max-width:700px;margin:0 auto;padding:0 16px 48px}
+.ai-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 24px var(--shadow)}
+.ai-header{background:var(--green);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:10px}
+.ai-header-icon{width:32px;height:32px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
+.ai-header-text h2{font-size:15px;font-weight:500;margin:0}
+.ai-header-text p{font-size:12px;opacity:0.85;margin:0}
+.ai-body{padding:20px}
+.step-label{font-size:12px;color:var(--green);font-weight:500;margin-bottom:8px;margin-top:16px}
+.step-label:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.chip{padding:7px 14px;border-radius:20px;border:1px solid var(--border);font-size:13px;cursor:pointer;background:var(--white);color:var(--text);transition:all 0.15s;font-family:'Noto Sans JP',sans-serif}
+.chip:hover{border-color:var(--green-mid);color:var(--green)}
+.chip.sel{background:var(--green-light);border-color:var(--green);color:var(--green-dark);font-weight:500}
+.concern-area{margin-top:16px}
+.concern-area label{font-size:13px;color:var(--text-sub);display:block;margin-bottom:8px}
+textarea{width:100%;border:1px solid var(--border);border-radius:var(--radius);padding:12px;font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text);resize:none;height:80px;line-height:1.7;background:var(--bg)}
+textarea:focus{outline:none;border-color:var(--green-mid)}
+.btn-ask{width:100%;margin-top:16px;padding:14px;background:var(--green);color:#fff;border:none;border-radius:var(--radius);font-size:15px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;font-weight:500;transition:background 0.2s}
+.btn-ask:hover{background:var(--green-dark)}
+.btn-ask:disabled{opacity:0.5;cursor:not-allowed}
+
+/* UGOCHI BOX */
+.ugochi-btn{width:100%;margin-top:10px;padding:11px;background:var(--white);color:var(--amber);border:1px solid var(--amber);border-radius:var(--radius);font-size:14px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;transition:all 0.2s}
+.ugochi-btn:hover{background:var(--amber-light)}
+
+.response-wrap{display:none;margin-top:16px;border-top:1px solid var(--border);padding-top:16px}
+.response-label{font-size:12px;color:var(--green);font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.response-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block}
+.response-text{font-size:14px;line-height:2;color:var(--text);white-space:pre-wrap}
+.response-footer{margin-top:16px;padding:12px;background:var(--green-light);border-radius:var(--radius);font-size:12px;color:var(--green-dark);line-height:1.8}
+.loading-dots span{animation:blink 1.2s infinite}
+.loading-dots span:nth-child(2){animation-delay:0.2s}
+.loading-dots span:nth-child(3){animation-delay:0.4s}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+
+/* CATEGORY SECTION */
+.section{max-width:1000px;margin:0 auto;padding:40px 20px}
+.section-title{font-family:'Noto Serif JP',serif;font-size:20px;color:var(--green-dark);margin-bottom:8px;font-weight:600}
+.section-sub{font-size:13px;color:var(--text-sub);margin-bottom:24px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.cat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:var(--text);transition:all 0.2s;display:block}
+.cat-card:hover{border-color:var(--green-mid);box-shadow:0 4px 16px var(--shadow);transform:translateY(-2px)}
+.cat-icon{font-size:24px;margin-bottom:10px}
+.cat-name{font-size:14px;font-weight:500;color:var(--green-dark);margin-bottom:4px}
+.cat-desc{font-size:12px;color:var(--text-sub);line-height:1.6}
+.cat-tag{display:inline-block;margin-top:8px;font-size:11px;background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:10px}
+
+/* AFFILI NOTE */
+.affili-note{max-width:700px;margin:0 auto 40px;padding:0 16px}
+.affili-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;font-size:12px;color:var(--text-light);line-height:1.8}
+
+/* DISCLAIMER */
+.disclaimer{max-width:700px;margin:0 auto 20px;padding:0 16px}
+.disclaimer-box{background:var(--green-light);border-radius:var(--radius);padding:14px 18px;font-size:12px;color:var(--green-dark);line-height:1.8;border-left:3px solid var(--green)}
+
+/* FOOTER */
+footer{background:var(--green-dark);color:rgba(255,255,255,0.7);padding:32px 24px;text-align:center;font-size:12px;line-height:2}
+footer a{color:rgba(255,255,255,0.6);text-decoration:none}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{display:none}
+  .hero{padding:40px 16px 32px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">やさしい介護ナビ<span>突然の介護を、一緒に整理しましょう</span></a>
+  <nav>
+    <a href="#categories">カテゴリ</a>
+    <a href="#ai-consult">AI相談</a>
+    <a href="#disclaimer">免責</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">無料・登録不要・AI相談</div>
+  <h1>介護は、突然始まります。<br>一人で抱え込まないでください。</h1>
+  <p>状況を教えていただければ、AIが今できることを一緒に整理します。<br>正解を押しつけず、あなたのペースで。</p>
+</section>
+
+<!-- AI相談エリア -->
+<div class="ai-section" id="ai-consult">
+  <div class="ai-card">
+    <div class="ai-header">
+      <div class="ai-header-icon">🤝</div>
+      <div class="ai-header-text">
+        <h2>AI相談窓口</h2>
+        <p>状況を選んで、悩みを教えてください</p>
+      </div>
+    </div>
+    <div class="ai-body">
+      <div class="step-label">介護される方との関係</div>
+      <div class="chips" id="chips-rel">
+        <div class="chip" onclick="pick(this,'rel')">親（父・母）</div>
+        <div class="chip" onclick="pick(this,'rel')">配偶者</div>
+        <div class="chip" onclick="pick(this,'rel')">祖父母</div>
+        <div class="chip" onclick="pick(this,'rel')">その他家族</div>
+      </div>
+
+      <div class="step-label">介護の場所・状況</div>
+      <div class="chips" id="chips-place">
+        <div class="chip" onclick="pick(this,'place')">自宅で介護中</div>
+        <div class="chip" onclick="pick(this,'place')">施設を探している</div>
+        <div class="chip" onclick="pick(this,'place')">まだ何もしていない</div>
+        <div class="chip" onclick="pick(this,'place')">8050・ひきこもり家族</div>
+      </div>
+
+      <div class="step-label">介護度（わかる場合）</div>
+      <div class="chips" id="chips-level">
+        <div class="chip" onclick="pick(this,'level')">要支援1〜2</div>
+        <div class="chip" onclick="pick(this,'level')">要介護1〜2</div>
+        <div class="chip" onclick="pick(this,'level')">要介護3〜5</div>
+        <div class="chip" onclick="pick(this,'level')">認定未申請</div>
+      </div>
+
+      <div class="concern-area">
+        <label>一番困っていること・相談したいこと</label>
+        <textarea id="concern" placeholder="例：夜中に何度も起きて呼ばれます。自分が疲れ果てていて、もう限界かもしれません…"></textarea>
+      </div>
+
+      <button class="btn-ask" id="btn-ask" onclick="askAI()">AIに相談する</button>
+      <button class="ugochi-btn" id="btn-ugochi" onclick="ugochi()">😔 もう疲れた・限界かも…という方はこちら</button>
+
+      <div class="response-wrap" id="response-wrap">
+        <div class="response-label">AIからのご提案</div>
+        <div class="response-text" id="response-text"></div>
+        <div class="response-footer" id="response-footer" style="display:none">
+          📍 <strong>地域包括支援センター</strong>に相談することもできます。お住まいの市区町村の窓口に無料で相談可能です。「地域包括支援センター ＋ お住まいの地域名」で検索してみてください。<br>
+          ※ このサービスはAIによる情報提供です。医療・介護の専門的な判断は専門家にご相談ください。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- カテゴリ -->
+<div class="section" id="categories">
+  <div class="section-title">カテゴリから探す</div>
+  <div class="section-sub">状況に合わせて、必要な情報を探してみてください</div>
+  <div class="cat-grid">
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🛏️</div>
+      <div class="cat-name">介護グッズ・用品</div>
+      <div class="cat-desc">ベッド・手すり・おむつ・車椅子など在宅介護を楽にするグッズ</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">📷</div>
+      <div class="cat-name">見守りカメラ・センサー</div>
+      <div class="cat-desc">離れて暮らす親の安全を確認できる見守り機器の選び方</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🍱</div>
+      <div class="cat-name">宅食・介護食</div>
+      <div class="cat-desc">やわらか食・塩分控えめ・栄養バランス対応の宅配弁当サービス</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">📱</div>
+      <div class="cat-name">シニアスマホ・タブレット</div>
+      <div class="cat-desc">高齢の親が使いやすいスマホ・タブレットと設定サポート</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">📋</div>
+      <div class="cat-name">介護保険・制度</div>
+      <div class="cat-desc">申請方法・負担限度額・高額介護合算など制度をわかりやすく解説</div>
+      <span class="cat-tag">情報記事</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🏠</div>
+      <div class="cat-name">在宅介護サービス</div>
+      <div class="cat-desc">訪問介護・デイサービス・ショートステイの選び方と費用</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🛡️</div>
+      <div class="cat-name">介護保険・生命保険</div>
+      <div class="cat-desc">もしもの時に備える保険の選び方・無料相談窓口のご案内</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">💼</div>
+      <div class="cat-name">介護職・転職サポート</div>
+      <div class="cat-desc">介護の仕事に就きたい方・転職を考えている方へ</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🔖</div>
+      <div class="cat-name">終活・エンディングノート</div>
+      <div class="cat-desc">相続・葬儀・遺言など「親亡き後」の準備をはじめるために</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🏡</div>
+      <div class="cat-name">8050問題・ひきこもり</div>
+      <div class="cat-desc">8050問題・ひきこもり家族の介護・自立支援・相談窓口</div>
+      <span class="cat-tag">A8・情報記事</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">💚</div>
+      <div class="cat-name">介護者のメンタルケア</div>
+      <div class="cat-desc">介護疲れ・罪悪感・イライラ…あなた自身を大切にするために</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🤖</div>
+      <div class="cat-name">介護×AI・便利サービス</div>
+      <div class="cat-desc">AIを使った見守り・話し相手・健康管理など最新サービス紹介</div>
+      <span class="cat-tag">Amazon・A8</span>
+    </a>
+  </div>
+</div>
+
+<!-- アフィリエイト開示 -->
+<div class="affili-note">
+  <div class="affili-box">
+    📢 <strong>アフィリエイト開示</strong>：当サイトは一部のリンクにアフィリエイト広告（Amazon・楽天市場・A8.net等）を含む場合があります。紹介料はサイト運営に充てられますが、掲載内容の公正性には影響しません。あなたの状況に合った情報提供を最優先にしています。
+  </div>
+</div>
+
+<!-- 免責 -->
+<div class="disclaimer" id="disclaimer">
+  <div class="disclaimer-box">
+    ⚠️ <strong>免責事項</strong>：当サイトのAI相談および記事は、一般的な情報提供を目的としています。医療・介護の専門的な判断は、かかりつけ医・ケアマネジャー・地域包括支援センターにご相談ください。個別の状況により最適な選択は異なります。「〜の傾向があります」「〜の可能性があります」という表現は断定ではありません。
+  </div>
+</div>
+
+<footer>
+  <div>やさしい介護ナビ｜突然の介護に悩む家族へ</div>
+  <div style="margin-top:8px"><a href="#">プライバシーポリシー</a>　<a href="#">お問い合わせ</a></div>
+  <div style="margin-top:8px;font-size:11px">© 2026 やさしい介護ナビ. Powered by Twinkle Lab</div>
+</footer>
+
+<script>
+const sel = {};
+
+function pick(el, group) {
+  document.querySelectorAll(`#chips-${group} .chip`).forEach(c => c.classList.remove('sel'));
+  el.classList.add('sel');
+  sel[group] = el.textContent.trim();
+}
+
+async function callAI(prompt) {
+  const wrap = document.getElementById('response-wrap');
+  const txt = document.getElementById('response-text');
+  const footer = document.getElementById('response-footer');
+  wrap.style.display = 'block';
+  txt.innerHTML = '<span class="loading-dots"><span>●</span><span>●</span><span>●</span></span> AIが考えています…';
+  footer.style.display = 'none';
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.map(b => b.text || '').join('') || 'エラーが発生しました。';
+    txt.textContent = text;
+    footer.style.display = 'block';
+  } catch(e) {
+    txt.textContent = 'エラーが発生しました。しばらくしてから再度お試しください。';
+  }
+}
+
+async function askAI() {
+  const concern = document.getElementById('concern').value.trim();
+  if (!concern) { alert('相談内容を入力してください'); return; }
+
+  document.getElementById('btn-ask').disabled = true;
+
+  const relation = sel['rel'] || '未回答';
+  const place = sel['place'] || '未回答';
+  const level = sel['level'] || '未回答';
+
+  const prompt = `あなたは「やさしい介護ナビ」の専属サポートAIです。
+
+【絶対ルール】
+- 説教・精神論・「頑張って」は禁止
+- 「すぐ施設へ」だけで終わらない
+- 医療・介護の断定表現禁止（「〜の傾向があります」「〜の可能性があります」を使う）
+- 読者を責めない・否定しない
+- 「今できる小さな一歩」を必ず提示する
+- 専門用語は噛み砕く
+- 300〜400文字でまとめる
+- 最後に地域包括支援センターへの案内を一言添える
+
+【相談者の状況】
+- 関係：${relation}
+- 場所・状況：${place}
+- 介護度：${level}
+- 相談内容：${concern}
+
+温かく、落ち着いたトーンで、今できることを整理してください。`;
+
+  await callAI(prompt);
+  document.getElementById('btn-ask').disabled = false;
+}
+
+async function ugochi() {
+  document.getElementById('btn-ugochi').disabled = true;
+
+  const prompt = `あなたは「やさしい介護ナビ」の共感サポートAIです。
+
+介護で「もう疲れた」「限界かも」と感じている人が来ています。
+
+【絶対ルール】
+- まず全力で共感・肯定する
+- 「頑張って」は絶対に言わない
+- 疲れることは当然だと伝える
+- 罪悪感を持たなくていいと伝える
+- 小さな休息の取り方を1〜2つだけ提案する
+- 最後に「一人で抱え込まなくていい」と伝える
+- 250文字程度で、温かく、短く
+
+介護で限界を感じているこの方への言葉をください。`;
+
+  await callAI(prompt);
+  document.getElementById('btn-ugochi').disabled = false;
+}
+</script>
+</body>
+</html>
