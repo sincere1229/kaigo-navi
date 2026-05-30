@@ -3,1888 +3,378 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>実家どうするナビ｜親の実家・老後・相続を家族で整理する</title>
-<meta name="description" content="3分でわかる、親の実家の選択肢。売却・賃貸・リバースモーゲージ・そのままを中立比較。家族会議シート無料ダウンロード。">
+<title>やさしい介護ナビ｜突然の介護に悩む家族へ、一緒に整理しましょう</title>
+<meta name="description" content="突然始まる介護で不安な家族へ。介護度・状況・悩みから、今できることをAIと一緒に整理します。介護グッズ・制度・施設・8050問題まで幅広くサポート。登録不要・無料。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green: #1a7a5e;
+  --green: #2d7a5f;
   --green-light: #e8f5f0;
-  --green-mid: #2d9e7a;
-  --amber: #e07b39;
-  --amber-light: #fdf0e8;
-  --gray: #5a5a5a;
-  --gray-light: #f5f5f3;
-  --border: #e0ddd8;
-  --text: #1a1a1a;
-  --text-sub: #6b6b6b;
-  --white: #ffffff;
+  --green-mid: #4a9e80;
+  --green-dark: #1a5c44;
+  --amber: #c8833a;
+  --amber-light: #fdf3e7;
+  --text: #2c2c2c;
+  --text-sub: #666;
+  --text-light: #999;
+  --bg: #fafaf8;
+  --white: #fff;
+  --border: #e5e5e0;
   --radius: 12px;
-  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow: rgba(45,122,95,0.08);
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: var(--text);
-  background: #fafaf8;
-  font-size: 19px;
-  line-height: 1.7;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text);background:var(--bg);line-height:1.8}
 
 /* HEADER */
-header {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo-mark {
-  width: 36px; height: 36px;
-  background: var(--green);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-}
-.logo-text { font-size: 19px; font-weight: 700; color: var(--green); }
-.logo-sub { font-size: 13px; color: var(--text-sub); margin-top: -2px; }
+header{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--green-dark);font-weight:600;text-decoration:none}
+.logo span{font-size:12px;display:block;color:var(--text-sub);font-weight:300;font-family:'Noto Sans JP',sans-serif;margin-top:-2px}
+nav{display:flex;gap:20px;font-size:13px}
+nav a{color:var(--text-sub);text-decoration:none}
+nav a:hover{color:var(--green)}
 
 /* HERO */
-.hero {
-  background: linear-gradient(160deg, #1a7a5e 0%, #2d9e7a 60%, #e8f5f0 100%);
-  color: white;
-  padding: 56px 20px 48px;
-  text-align: center;
-}
-.hero-badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 15px;
-  margin-bottom: 18px;
-  letter-spacing: 0.05em;
-}
-.hero h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(22px, 5vw, 32px);
-  line-height: 1.5;
-  margin-bottom: 12px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-.hero-sub {
-  font-size: 17px;
-  opacity: 0.9;
-  margin-bottom: 32px;
-  line-height: 1.8;
-}
-.hero-btn {
-  display: inline-block;
-  background: var(--white);
-  color: var(--green);
-  font-weight: 700;
-  font-size: 19px;
-  padding: 16px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.hero-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-.hero-note { font-size: 14px; opacity: 0.75; margin-top: 12px; }
+.hero{background:linear-gradient(135deg,#f0f8f4 0%,#fafaf8 60%,#fdf3e7 100%);padding:60px 24px 48px;text-align:center}
+.hero-badge{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:12px;padding:4px 14px;border-radius:20px;margin-bottom:16px;border:1px solid rgba(45,122,95,0.2)}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,34px);font-weight:600;color:var(--green-dark);line-height:1.5;margin-bottom:16px}
+.hero p{font-size:15px;color:var(--text-sub);max-width:560px;margin:0 auto 32px;line-height:2}
 
-/* TRUST */
-.trust {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 20px;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.trust-item { font-size: 16px; color: var(--text-sub); display: flex; align-items: center; gap: 6px; }
-.trust-icon { font-size: 19px; }
+/* AI CHAT AREA */
+.ai-section{max-width:700px;margin:0 auto;padding:0 16px 48px}
+.ai-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 24px var(--shadow)}
+.ai-header{background:var(--green);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:10px}
+.ai-header-icon{width:32px;height:32px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
+.ai-header-text h2{font-size:15px;font-weight:500;margin:0}
+.ai-header-text p{font-size:12px;opacity:0.85;margin:0}
+.ai-body{padding:20px}
+.step-label{font-size:12px;color:var(--green);font-weight:500;margin-bottom:8px;margin-top:16px}
+.step-label:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.chip{padding:7px 14px;border-radius:20px;border:1px solid var(--border);font-size:13px;cursor:pointer;background:var(--white);color:var(--text);transition:all 0.15s;font-family:'Noto Sans JP',sans-serif}
+.chip:hover{border-color:var(--green-mid);color:var(--green)}
+.chip.sel{background:var(--green-light);border-color:var(--green);color:var(--green-dark);font-weight:500}
+.concern-area{margin-top:16px}
+.concern-area label{font-size:13px;color:var(--text-sub);display:block;margin-bottom:8px}
+textarea{width:100%;border:1px solid var(--border);border-radius:var(--radius);padding:12px;font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text);resize:none;height:80px;line-height:1.7;background:var(--bg)}
+textarea:focus{outline:none;border-color:var(--green-mid)}
+.btn-ask{width:100%;margin-top:16px;padding:14px;background:var(--green);color:#fff;border:none;border-radius:var(--radius);font-size:15px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;font-weight:500;transition:background 0.2s}
+.btn-ask:hover{background:var(--green-dark)}
+.btn-ask:disabled{opacity:0.5;cursor:not-allowed}
 
-/* CONTAINER */
-.container { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+/* UGOCHI BOX */
+.ugochi-btn{width:100%;margin-top:10px;padding:11px;background:var(--white);color:var(--amber);border:1px solid var(--amber);border-radius:var(--radius);font-size:14px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;transition:all 0.2s}
+.ugochi-btn:hover{background:var(--amber-light)}
 
-/* SECTION */
-.section { padding: 40px 0; }
-.section-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 24px;
-  color: var(--green);
-  margin-bottom: 8px;
-  text-align: center;
-}
-.section-sub { font-size: 17px; color: var(--text-sub); text-align: center; margin-bottom: 28px; }
+.response-wrap{display:none;margin-top:16px;border-top:1px solid var(--border);padding-top:16px}
+.response-label{font-size:12px;color:var(--green);font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.response-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block}
+.response-text{font-size:14px;line-height:2;color:var(--text);white-space:pre-wrap}
+.response-footer{margin-top:16px;padding:12px;background:var(--green-light);border-radius:var(--radius);font-size:12px;color:var(--green-dark);line-height:1.8}
+.loading-dots span{animation:blink 1.2s infinite}
+.loading-dots span:nth-child(2){animation-delay:0.2s}
+.loading-dots span:nth-child(3){animation-delay:0.4s}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
 
-/* STEP INDICATOR */
-.step-indicator {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 24px;
-  justify-content: center;
-}
-.step-dot {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: var(--border);
-  color: var(--text-sub);
-  font-size: 12px;
-  font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  position: relative;
-  z-index: 1;
-  transition: background 0.3s, color 0.3s;
-}
-.step-dot.active { background: var(--green); color: white; }
-.step-dot.done { background: var(--green-mid); color: white; }
-.step-line {
-  height: 2px;
-  width: 40px;
-  background: var(--border);
-  transition: background 0.3s;
-}
-.step-line.done { background: var(--green-mid); }
+/* CATEGORY SECTION */
+.section{max-width:1000px;margin:0 auto;padding:40px 20px}
+.section-title{font-family:'Noto Serif JP',serif;font-size:20px;color:var(--green-dark);margin-bottom:8px;font-weight:600}
+.section-sub{font-size:13px;color:var(--text-sub);margin-bottom:24px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.cat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:var(--text);transition:all 0.2s;display:block}
+.cat-card:hover{border-color:var(--green-mid);box-shadow:0 4px 16px var(--shadow);transform:translateY(-2px)}
+.cat-icon{font-size:24px;margin-bottom:10px}
+.cat-name{font-size:14px;font-weight:500;color:var(--green-dark);margin-bottom:4px}
+.cat-desc{font-size:12px;color:var(--text-sub);line-height:1.6}
+.cat-tag{display:inline-block;margin-top:8px;font-size:11px;background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:10px}
 
-/* FORM CARD */
-.form-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  box-shadow: var(--shadow);
-  margin-bottom: 20px;
-}
-.form-card h2 {
-  font-size: 19px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.step-num {
-  background: var(--green);
-  color: white;
-  border-radius: 6px;
-  padding: 2px 9px;
-  font-size: 14px;
-}
-
-/* SELECT BUTTONS */
-.choice-group { margin-bottom: 20px; }
-.choice-label { font-size: 17px; font-weight: 500; margin-bottom: 10px; color: var(--text); }
-.choice-label .required { color: var(--amber); font-size: 11px; margin-left: 6px; }
-.choice-grid { display: grid; gap: 8px; }
-.choice-grid.col2 { grid-template-columns: 1fr 1fr; }
-.choice-grid.col3 { grid-template-columns: 1fr 1fr 1fr; }
-.choice-btn {
-  padding: 15px 10px;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  background: var(--white);
-  font-size: 17px;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: center;
-  color: var(--text);
-  line-height: 1.4;
-}
-.choice-btn:hover { border-color: var(--green); background: var(--green-light); }
-.choice-btn.selected {
-  border-color: var(--green);
-  background: var(--green-light);
-  color: var(--green);
-  font-weight: 700;
-}
-
-/* NEXT BTN */
-.next-btn {
-  width: 100%;
-  padding: 16px;
-  background: var(--green);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  font-size: 19px;
-  font-weight: 700;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  margin-top: 8px;
-}
-.next-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
-
-/* RESULT */
-.result-section { display: none; }
-.result-header {
-  background: var(--green-light);
-  border: 1px solid #b8ddd0;
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.result-header h2 { font-size: 18px; color: var(--green); font-weight: 700; margin-bottom: 8px; }
-.price-range { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--text); }
-.price-note { font-size: 14px; color: var(--text-sub); margin-top: 4px; }
-
-/* RESULT CARDS */
-.result-grid { display: grid; gap: 12px; margin-bottom: 20px; }
-.result-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
-}
-.result-card-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.result-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
-.icon-sell { background: #fde8d8; }
-.icon-rent { background: #ddeeff; }
-.icon-stay { background: #f0f0f0; }
-.icon-rev  { background: #ede8fd; }
-.result-card-title { font-size: 19px; font-weight: 700; }
-.result-card-subtitle { font-size: 15px; color: var(--text-sub); }
-.result-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--gray-light);
-  align-items: center;
-}
-.result-row:last-child { border-bottom: none; }
-.result-row-label { color: var(--text-sub); }
-.result-row-value { font-weight: 500; }
-.result-comment {
-  background: var(--gray-light);
-  border-radius: 8px;
-  padding: 12px 14px;
-  font-size: 16px;
-  color: var(--text-sub);
-  margin-top: 12px;
-  line-height: 1.6;
-}
-.risk-badge {
-  display: inline-block;
-  font-size: 11px;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-.risk-high { background: #fde8e8; color: #c0392b; }
-.risk-mid  { background: #fdf0e8; color: #c07030; }
-.risk-low  { background: #e8f5f0; color: #1a7a5e; }
-
-/* ===== アフィリエイトボタン共通 ===== */
-.affili-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  font-family: 'Noto Sans JP', sans-serif;
-  border-radius: 50px;
-  padding: 16px 18px;
-  font-size: 17px;
-  margin-top: 14px;
-  transition: transform 0.2s, opacity 0.2s;
-  cursor: pointer;
-}
-.affili-btn:hover { transform: translateY(-1px); opacity: 0.9; }
-
-.affili-btn-green {
-  background: var(--green);
-  color: #fff;
-}
-.affili-btn-orange {
-  background: var(--amber);
-  color: #fff;
-}
-.affili-btn-blue {
-  background: #2563eb;
-  color: #fff;
-}
-.affili-btn-purple {
-  background: #7c3aed;
-  color: #fff;
-}
-.affili-note {
-  font-size: 14px;
-  color: var(--text-sub);
-  text-align: center;
-  margin-top: 6px;
-}
-
-/* アフィリバナーエリア */
-.affili-section {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: var(--shadow);
-}
-.affili-section-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-sub);
-  margin-bottom: 12px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.affili-grid {
-  display: grid;
-  gap: 10px;
-}
-.affili-grid.col2 { grid-template-columns: 1fr 1fr; }
+/* AFFILI NOTE */
+.affili-note{max-width:700px;margin:0 auto 40px;padding:0 16px}
+.affili-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;font-size:12px;color:var(--text-light);line-height:1.8}
 
 /* DISCLAIMER */
-.disclaimer {
-  background: var(--gray-light);
-  border-radius: 8px;
-  padding: 14px 16px;
-  font-size: 14px;
-  color: var(--text-sub);
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-/* PDF SECTION */
-.pdf-section {
-  background: var(--amber-light);
-  border: 1px solid #f0c8a0;
-  border-radius: var(--radius);
-  padding: 24px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.pdf-section h3 { font-size: 19px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-.pdf-section p { font-size: 16px; color: var(--text-sub); margin-bottom: 16px; line-height: 1.7; }
-.pdf-btn {
-  display: inline-block;
-  background: var(--amber);
-  color: white;
-  font-weight: 700;
-  font-size: 19px;
-  padding: 14px 32px;
-  border-radius: 50px;
-  border: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-.pdf-btn:hover { background: #c56a2a; transform: translateY(-1px); }
-
-/* EXPERT SECTION */
-.expert-section {
-  background: linear-gradient(135deg, #1a7a5e 0%, #2d9e7a 100%);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
-}
-.expert-section h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
-.expert-section p { font-size: 16px; opacity: 0.9; margin-bottom: 20px; line-height: 1.7; }
-.expert-btn-wrap {
-  display: grid;
-  gap: 10px;
-  max-width: 440px;
-  margin: 0 auto;
-}
-.expert-btn {
-  display: block;
-  background: white;
-  color: var(--green);
-  font-weight: 700;
-  font-size: 18px;
-  padding: 14px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  transition: transform 0.2s, opacity 0.2s;
-}
-.expert-btn:hover { transform: translateY(-1px); opacity: 0.92; }
-.expert-btn.orange {
-  background: var(--amber);
-  color: white;
-}
-.expert-btn-note {
-  font-size: 11px;
-  opacity: 0.75;
-  margin-top: 10px;
-}
-
-/* RESTART */
-.restart-btn {
-  width: 100%;
-  padding: 12px;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  color: var(--text-sub);
-  font-size: 14px;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  margin-bottom: 40px;
-}
-.restart-btn:hover { background: var(--gray-light); }
-
-/* コラムセクション */
-.column-section {
-  padding: 40px 0;
-  border-top: 1px solid var(--border);
-}
-.column-grid { display: grid; gap: 16px; }
-.column-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
-}
-.column-tag {
-  display: inline-block;
-  background: var(--green-light);
-  color: var(--green);
-  font-size: 14px;
-  font-weight: 700;
-  padding: 2px 10px;
-  border-radius: 20px;
-  margin-bottom: 8px;
-}
-.column-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
-.column-card p { font-size: 16px; color: var(--text-sub); line-height: 1.7; margin-bottom: 14px; }
+.disclaimer{max-width:700px;margin:0 auto 20px;padding:0 16px}
+.disclaimer-box{background:var(--green-light);border-radius:var(--radius);padding:14px 18px;font-size:12px;color:var(--green-dark);line-height:1.8;border-left:3px solid var(--green)}
 
 /* FOOTER */
-footer {
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  padding: 32px 20px;
-  text-align: center;
-  font-size: 14px;
-  color: var(--text-sub);
-  line-height: 2;
-}
+footer{background:var(--green-dark);color:rgba(255,255,255,0.7);padding:32px 24px;text-align:center;font-size:12px;line-height:2}
+footer a{color:rgba(255,255,255,0.6);text-decoration:none}
 
-/* HIDDEN */
-.hidden { display: none !important; }
-
-/* ANIMATE */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-.fade-in { animation: fadeIn 0.4s ease forwards; }
-
-/* トップに戻るボタン（固定） */
-.back-to-top {
-  position: fixed;
-  bottom: 24px;
-  right: 20px;
-  background: var(--green);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 14px 24px;
-  font-size: 17px;
-  font-weight: 700;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  z-index: 200;
-  transition: opacity 0.3s, transform 0.2s;
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{display:none}
+  .hero{padding:40px 16px 32px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
 }
-.back-to-top.visible { opacity: 1; pointer-events: auto; }
-.back-to-top:hover { transform: translateY(-2px); background: var(--green-mid); }
-
-/* コラム別ページ */
-.page { display: none; }
-.page.active { display: block; }
-#mainPage { display: block; }
-
-/* コラム記事ページ */
-.article-page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 24px 16px 60px;
-}
-.article-header {
-  padding: 32px 0 24px;
-  border-bottom: 2px solid var(--border);
-  margin-bottom: 28px;
-}
-.article-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--green);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-bottom: 16px;
-  background: none;
-  border: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  padding: 0;
-}
-.article-back:hover { text-decoration: underline; }
-.article-tag {
-  display: inline-block;
-  background: var(--green-light);
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 12px;
-  border-radius: 20px;
-  margin-bottom: 12px;
-}
-.article-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(20px, 4vw, 26px);
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-.article-lead {
-  font-size: 17px;
-  color: var(--text-sub);
-  line-height: 1.8;
-  padding: 16px;
-  background: var(--green-light);
-  border-radius: 8px;
-  border-left: 4px solid var(--green);
-}
-.article-body h2 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 22px;
-  color: var(--green);
-  margin: 32px 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--green-light);
-}
-.article-body h3 {
-  font-size: 19px;
-  font-weight: 700;
-  margin: 20px 0 8px;
-}
-.article-body p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 16px;
-  color: var(--text);
-}
-.article-body ul {
-  padding-left: 20px;
-  margin-bottom: 16px;
-}
-.article-body ul li {
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 6px;
-}
-.article-box {
-  background: var(--amber-light);
-  border: 1px solid #f0c8a0;
-  border-radius: 8px;
-  padding: 16px 18px;
-  margin: 20px 0;
-  font-size: 17px;
-  line-height: 1.8;
-}
-.article-box strong { color: var(--amber); }
-.article-data {
-  background: var(--gray-light);
-  border-radius: 8px;
-  padding: 16px 18px;
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--text-sub);
-}
-.article-cta {
-  background: linear-gradient(135deg, #1a7a5e, #2d9e7a);
-  border-radius: var(--radius);
-  padding: 24px;
-  text-align: center;
-  margin: 32px 0;
-  color: white;
-}
-.article-cta h3 { font-size: 16px; margin-bottom: 8px; }
-.article-cta p { font-size: 13px; opacity: 0.9; margin-bottom: 16px; }
-
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<div id="mainPage" class="page">
 <header>
-  <div class="logo-mark">🏠</div>
-  <div>
-    <div class="logo-text">実家どうするナビ</div>
-    <div class="logo-sub">親の実家・老後・相続を家族で整理する</div>
-  </div>
+  <a href="/" class="logo">やさしい介護ナビ<span>突然の介護を、一緒に整理しましょう</span></a>
+  <nav>
+    <a href="#categories">カテゴリ</a>
+    <a href="#ai-consult">AI相談</a>
+    <a href="#disclaimer">免責</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-badge">📋 メールアドレス・個人情報の登録一切不要</div>
-  <h1>親の実家、<br>そのままにしていませんか？</h1>
-  <p class="hero-sub">
-    「売るといくら？」が個人情報なしでわかる、<br>唯一の実家診断サイト。<br>
-    40〜60代の子ども世代が3分で使える中立比較ツールです。
-  </p>
-  <a href="#shindan" class="hero-btn" style="font-size:21px;padding:18px 44px;">▶ 今すぐ無料で診断する</a>
-  <div class="hero-note">✅ 登録不要 ✅ 個人情報不要 ✅ 電話営業なし</div>
-</div>
+<section class="hero">
+  <div class="hero-badge">無料・登録不要・AI相談</div>
+  <h1>介護は、突然始まります。<br>一人で抱え込まないでください。</h1>
+  <p>状況を教えていただければ、AIが今できることを一緒に整理します。<br>正解を押しつけず、あなたのペースで。</p>
+</section>
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="trust-item"><span class="trust-icon">🔒</span>登録・個人情報不要</div>
-  <div class="trust-item"><span class="trust-icon">📵</span>電話営業なし</div>
-  <div class="trust-item"><span class="trust-icon">⚖️</span>不動産会社に偏らない中立比較</div>
-  <div class="trust-item"><span class="trust-icon">📄</span>家族会議シート無料</div>
-  <div class="trust-item"><span class="trust-icon">🏛️</span>国交省データ参照</div>
-</div>
-
-<!-- MAIN FORM -->
-<div class="container">
-  <div class="section" id="shindan">
-
-    <!-- STEP INDICATOR -->
-    <div class="step-indicator" id="stepIndicator">
-      <div class="step-dot active" id="dot1">1</div>
-      <div class="step-line" id="line1"></div>
-      <div class="step-dot" id="dot2">2</div>
-      <div class="step-line" id="line2"></div>
-      <div class="step-dot" id="dot3">結果</div>
-    </div>
-
-    <!-- STEP1 -->
-    <div id="step1">
-      <div class="form-card fade-in">
-        <h2><span class="step-num">STEP 1</span>基本情報を入力（約30秒）</h2>
-
-        <div class="choice-group">
-          <div class="choice-label">親御さんの年齢は？<span class="required">必須</span></div>
-          <div class="choice-grid col3">
-            <button class="choice-btn" onclick="select(this,'age','70前半')">70代前半</button>
-            <button class="choice-btn" onclick="select(this,'age','70後半')">70代後半</button>
-            <button class="choice-btn" onclick="select(this,'age','80以上')">80代以上</button>
-          </div>
-        </div>
-
-        <div class="choice-group">
-          <div class="choice-label">実家の郵便番号<span class="required">必須</span></div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <input type="text" id="zipInput" maxlength="8" placeholder="例：123-4567"
-              style="flex:1;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:15px;font-family:'Noto Sans JP',sans-serif;color:var(--text);"
-              oninput="onZipInput(this.value)">
-            <button onclick="searchZip()" style="padding:12px 16px;background:var(--green);color:#fff;border:none;border-radius:8px;font-size:13px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;white-space:nowrap;">住所検索</button>
-          </div>
-          <div id="zipStatus" style="font-size:12px;color:var(--text-sub);margin-top:6px;min-height:18px;"></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
-            <div>
-              <div style="font-size:12px;color:var(--text-sub);margin-bottom:4px;">都道府県</div>
-              <input type="text" id="prefDisplay" readonly placeholder="自動入力"
-                style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;background:var(--gray-light);font-family:'Noto Sans JP',sans-serif;color:var(--text);">
-            </div>
-            <div>
-              <div style="font-size:12px;color:var(--text-sub);margin-bottom:4px;">市区町村</div>
-              <input type="text" id="cityDisplay" readonly placeholder="自動入力"
-                style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;background:var(--gray-light);font-family:'Noto Sans JP',sans-serif;color:var(--text);">
-            </div>
-          </div>
-        </div>
-
-        <div class="choice-group">
-          <div class="choice-label">建物の種類<span class="required">必須</span></div>
-          <div class="choice-grid col2">
-            <button class="choice-btn" onclick="select(this,'type','戸建')">🏡 一戸建て</button>
-            <button class="choice-btn" onclick="select(this,'type','マンション')">🏢 マンション</button>
-          </div>
-        </div>
-
-        <div class="choice-group">
-          <div class="choice-label">現在の実家の状況<span class="required">必須</span></div>
-          <div class="choice-grid col2">
-            <button class="choice-btn" onclick="select(this,'status','独居')">一人で暮らしている</button>
-            <button class="choice-btn" onclick="select(this,'status','夫婦')">夫婦で暮らしている</button>
-            <button class="choice-btn" onclick="select(this,'status','施設')">施設に入っている</button>
-            <button class="choice-btn" onclick="select(this,'status','空き家')">すでに空き家</button>
-          </div>
-        </div>
-
-        <div class="choice-group">
-          <div class="choice-label">農地（田・畑・山林等）はありますか？<span class="required">必須</span></div>
-          <div class="choice-grid col2">
-            <button class="choice-btn" onclick="select(this,'farmland','あり')">🌾 農地あり<br><small style="font-weight:400;color:#6b6b6b;">田・畑・山林など含む</small></button>
-            <button class="choice-btn" onclick="select(this,'farmland','なし')">🏠 農地なし<br><small style="font-weight:400;color:#6b6b6b;">宅地・建物のみ</small></button>
-          </div>
-        </div>
-
-        <button class="next-btn" onclick="goStep2()">結果をざっくり見る →</button>
+<!-- AI相談エリア -->
+<div class="ai-section" id="ai-consult">
+  <div class="ai-card">
+    <div class="ai-header">
+      <div class="ai-header-icon">🤝</div>
+      <div class="ai-header-text">
+        <h2>AI相談窓口</h2>
+        <p>状況を選んで、悩みを教えてください</p>
       </div>
     </div>
-
-    <!-- STEP2（任意・詳細） -->
-    <div id="step2" class="hidden">
-      <div class="form-card fade-in">
-        <h2><span class="step-num">STEP 2</span>詳しく入力（任意・精度アップ）</h2>
-
-        <div class="choice-group">
-          <div class="choice-label">築年数の目安</div>
-          <div class="choice-grid col2">
-            <button class="choice-btn" onclick="select(this,'age2','20年以内')">20年以内</button>
-            <button class="choice-btn" onclick="select(this,'age2','21-30年')">21〜30年</button>
-            <button class="choice-btn" onclick="select(this,'age2','31-40年')">31〜40年</button>
-            <button class="choice-btn" onclick="select(this,'age2','41年以上')">41年以上</button>
-          </div>
-        </div>
-
-        <div class="choice-group">
-          <div class="choice-label">お子さん（相続人）の人数</div>
-          <div class="choice-grid col3">
-            <button class="choice-btn" onclick="select(this,'heirs','1人')">1人</button>
-            <button class="choice-btn" onclick="select(this,'heirs','2人')">2人</button>
-            <button class="choice-btn" onclick="select(this,'heirs','3人以上')">3人以上</button>
-          </div>
-        </div>
-
-        <div class="choice-group">
-          <div class="choice-label">親御さんの年金（月額の目安）</div>
-          <div class="choice-grid col3">
-            <button class="choice-btn" onclick="select(this,'pension','少ない')">10万円未満</button>
-            <button class="choice-btn" onclick="select(this,'pension','普通')">10〜15万円</button>
-            <button class="choice-btn" onclick="select(this,'pension','多め')">15万円以上</button>
-          </div>
-        </div>
-
-        <button class="next-btn" onclick="showResult()">4つの選択肢を比較する →</button>
-        <button class="choice-btn" onclick="showResult()" style="margin-top:10px;width:100%;color:var(--text-sub);">スキップして結果を見る</button>
-      </div>
-    </div>
-
-    <!-- RESULT -->
-    <div id="resultSection" class="result-section">
-
-      <!-- 価格レンジ -->
-      <div class="result-header fade-in">
-        <h2>🏠 実家の概算価格レンジ（参考値）</h2>
-        <div class="price-range" id="priceRange">—</div>
-        <div class="price-note" id="priceNote">国土交通省の公開データに基づく概算です（誤差±25〜35%）</div>
+    <div class="ai-body">
+      <div class="step-label">介護される方との関係</div>
+      <div class="chips" id="chips-rel">
+        <div class="chip" onclick="pick(this,'rel')">親（父・母）</div>
+        <div class="chip" onclick="pick(this,'rel')">配偶者</div>
+        <div class="chip" onclick="pick(this,'rel')">祖父母</div>
+        <div class="chip" onclick="pick(this,'rel')">その他家族</div>
       </div>
 
-      <!-- 4パターン比較 -->
-      <div class="result-grid" id="resultGrid"></div>
-
-      <!-- 免責 -->
-      <div class="disclaimer">
-        ⚠️ <strong>ご注意（参考値について）</strong><br>
-        本サービスで表示される金額および診断結果は、国土交通省の公開データおよび入力された条件に基づき機械的に算出された「簡易的な試算（参考値）」です。実際の売却価格・賃貸収入・融資額を保証するものではありません。当サイトは不動産の仲介行為、特定の金融商品の勧誘、および個別の法的・税務的判断を行うものではありません。最終的なご判断にあたっては、必ず専門家（不動産会社・FP・税理士・弁護士等）にご相談ください。
+      <div class="step-label">介護の場所・状況</div>
+      <div class="chips" id="chips-place">
+        <div class="chip" onclick="pick(this,'place')">自宅で介護中</div>
+        <div class="chip" onclick="pick(this,'place')">施設を探している</div>
+        <div class="chip" onclick="pick(this,'place')">まだ何もしていない</div>
+        <div class="chip" onclick="pick(this,'place')">8050・ひきこもり家族</div>
       </div>
 
-      <!-- ===== アフィリエイトエリア①：売却・査定系 ===== -->
-      <div class="affili-section fade-in">
-        <div class="affili-section-title">🏡 売却・査定を検討している方へ</div>
-        <div class="affili-grid">
-          <!-- ミライアス：¥15,000・確定率100% -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" rel="nofollow" class="affili-btn affili-btn-green">
-            🏠 ミライアスで無料査定する<br><small style="font-weight:400;opacity:0.85">高く・早く・安心な不動産売却</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" alt="">
-
-          <!-- ラクウル（空き家・中古戸建）：¥10,000・確定率100% EPC131 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+C968T6+56AO+HXD0Y" rel="nofollow" class="affili-btn affili-btn-orange">
-            🏚️ ラクウルで空き家・中古を売る<br><small style="font-weight:400;opacity:0.85">30秒で簡単査定・最短即日現金化</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3VR7+C8KT7E+56AO+BWVTE" alt="">
-
-          <!-- 持ち家売却（セレス）：¥13,000 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+AWCP7E+53AC+1BMW42" rel="nofollow" class="affili-btn" style="background:#16a34a;color:#fff;">
-            💴 持ち家売却で複数社比較<br><small style="font-weight:400;opacity:0.85">訪問査定＋相談完了で報酬発生</small>
-          </a>
-          <!-- ※セレスのリンクに差し替えてください -->
-        </div>
-        <p class="affili-note">※無料査定のみで成約の義務はありません。複数社で比較することをおすすめします。</p>
+      <div class="step-label">介護度（わかる場合）</div>
+      <div class="chips" id="chips-level">
+        <div class="chip" onclick="pick(this,'level')">要支援1〜2</div>
+        <div class="chip" onclick="pick(this,'level')">要介護1〜2</div>
+        <div class="chip" onclick="pick(this,'level')">要介護3〜5</div>
+        <div class="chip" onclick="pick(this,'level')">認定未申請</div>
       </div>
 
-      <!-- ===== アフィリエイトエリア②：空き家・訳あり物件 ===== -->
-      <div class="affili-section fade-in">
-        <div class="affili-section-title">🏚️ 困った実家・空き家の方へ</div>
-        <div class="affili-grid col2">
-          <!-- 訳あり物件買取センター：¥31,600 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BG0062+5TF6+5YJRM" rel="nofollow" class="affili-btn affili-btn-green">
-            どんな空き家でも買取<br><small style="font-weight:400;opacity:0.85">訳あり物件買取センター</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+BG0062+5TF6+5YJRM" alt="">
-
-          <!-- 借地権無料相談ドットコム：¥31,600 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+ATYYSA+5TEW+5YRHE" rel="nofollow" class="affili-btn affili-btn-blue">
-            借地権の相談・買取<br><small style="font-weight:400;opacity:0.85">借地権 無料相談ドットコム</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3VR7+ATYYSA+5TEW+5YRHE" alt="">
-        </div>
-        <p class="affili-note">※借地権・再建築不可・築50年以上・ゴミ屋敷なども対応</p>
+      <div class="concern-area">
+        <label>一番困っていること・相談したいこと</label>
+        <textarea id="concern" placeholder="例：夜中に何度も起きて呼ばれます。自分が疲れ果てていて、もう限界かもしれません…"></textarea>
       </div>
 
-      <!-- ===== アフィリエイトエリア③：空室活用・賃貸 ===== -->
-      <div class="affili-section fade-in">
-        <div class="affili-section-title">🔑 空き家を貸したい・活用したい方へ</div>
-        <div class="affili-grid">
-          <!-- クロスハウス：¥35,000 最高単価 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" rel="nofollow" class="affili-btn affili-btn-purple">
-            🏢 空き家・物件を借上げてもらう（クロスハウス）<br><small style="font-weight:400;opacity:0.85">民泊・シェアハウス・アパート 借上げ実績1万室</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" alt="">
+      <button class="btn-ask" id="btn-ask" onclick="askAI()">AIに相談する</button>
+      <button class="ugochi-btn" id="btn-ugochi" onclick="ugochi()">😔 もう疲れた・限界かも…という方はこちら</button>
 
-          <!-- リノベる。：¥1,500 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CKHHAY+303O+BWVTE" rel="nofollow" class="affili-btn" style="background:#0891b2;color:#fff;">
-            🔨 リノベーションして売却・活用（リノベる。）<br><small style="font-weight:400;opacity:0.85">マンションをかしこく売却</small>
-          </a>
-          <!-- ※リノベる。のリンクに差し替えてください -->
+      <div class="response-wrap" id="response-wrap">
+        <div class="response-label">AIからのご提案</div>
+        <div class="response-text" id="response-text"></div>
+        <div class="response-footer" id="response-footer" style="display:none">
+          📍 <strong>地域包括支援センター</strong>に相談することもできます。お住まいの市区町村の窓口に無料で相談可能です。「地域包括支援センター ＋ お住まいの地域名」で検索してみてください。<br>
+          ※ このサービスはAIによる情報提供です。医療・介護の専門的な判断は専門家にご相談ください。
         </div>
       </div>
-
-      <!-- ===== アフィリエイトエリア④：ローン・資金調達 ===== -->
-      <div class="affili-section fade-in">
-        <div class="affili-section-title">💰 不動産を担保に資金が必要な方へ</div>
-        <div class="affili-grid col2">
-          <!-- 丸の内AMS：¥3,000・EPC273・確定率65% -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" rel="nofollow" class="affili-btn affili-btn-blue">
-            審査最短即日・丸の内AMS<br><small style="font-weight:400;opacity:0.85">不動産担保ローン 無料審査</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" alt="">
-
-          <!-- JFC：¥2,000・確定率33% -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CI3QVU+3GA6+639IQ" rel="nofollow" class="affili-btn" style="background:#475569;color:#fff;">
-            JFC 不動産担保ローン<br><small style="font-weight:400;opacity:0.85">30年以上の実績・無料審査</small>
-          </a>
-          <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3VR7+CI3QVU+3GA6+639IQ" alt="">
-        </div>
-      </div>
-
-      <!-- ===== アフィリエイトエリア⑤：リフォーム ===== -->
-      <div class="affili-section fade-in">
-        <div class="affili-section-title">🔧 リフォーム・修繕を検討している方へ</div>
-        <div class="affili-grid col2">
-          <!-- Re:est：¥20,000 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BLCWM2+5UT6+5YJRM" rel="nofollow" class="affili-btn affili-btn-orange">
-            Re:est リフォーム見積もり<br><small style="font-weight:400;opacity:0.85">国内最大規模・無料見積もり</small>
-          </a>
-          <!-- ※Re:estのリンクに差し替えてください -->
-
-          <!-- 防水セレクトナビ：¥11,000・確定率66% -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+C5LN6I+46CI+NTJWY" rel="nofollow" class="affili-btn" style="background:#0369a1;color:#fff;">
-            防水工事 一括見積もり<br><small style="font-weight:400;opacity:0.85">防水セレクトナビ</small>
-          </a>
-          <!-- ※防水セレクトナビのリンクに差し替えてください -->
-
-          <!-- ハウジングバザール：¥3,776 -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CEJ596+2ISC+HXD0Y" rel="nofollow" class="affili-btn" style="background:#15803d;color:#fff;">
-            地域の厳選工務店を紹介<br><small style="font-weight:400;opacity:0.85">ハウジングバザール</small>
-          </a>
-          <!-- ※ハウジングバザールのリンクに差し替えてください -->
-
-          <!-- リフォーム比較プロ：¥5,500・確定率60% -->
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CC5EU2+46CI+5YRHE" rel="nofollow" class="affili-btn" style="background:#be185d;color:#fff;">
-            リフォーム比較プロ<br><small style="font-weight:400;opacity:0.85">複数社を一括比較</small>
-          </a>
-          <!-- ※リフォーム比較プロのリンクに差し替えてください -->
-        </div>
-        <p class="affili-note">※見積もり依頼のみで成約の義務はありません。</p>
-      </div>
-
-      <!-- 詳細入力へ -->
-      <div id="detailPrompt">
-        <div style="background:var(--gray-light);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin-bottom:16px;text-align:center;">
-          <div style="font-size:15px;color:var(--text-sub);margin-bottom:12px;">
-            📊 <strong>築年数・相続人数・年金額</strong>を追加入力すると<br>より精度の高い診断結果が出ます
-          </div>
-          <button onclick="goStep2FromResult()" style="background:var(--green);color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:17px;font-weight:700;font-family:'Noto Sans JP',sans-serif;cursor:pointer;transition:background 0.2s;">
-            ✏️ 詳細を入力して精度を上げる
-          </button>
-          <div style="font-size:13px;color:var(--text-sub);margin-top:8px;">任意入力・30秒で完了</div>
-        </div>
-      </div>
-
-      <!-- 農地あり専用書籍セクション -->
-      <div id="farmlandBookSection" style="display:none;" class="affili-section fade-in">
-        <div class="affili-section-title" style="color:#2d6a4f;">🌾 農地をお持ちの方へ——農地相続の専門書</div>
-        <p style="font-size:15px;color:#6b6b6b;text-align:center;margin-bottom:16px;">農地の相続・転用・承継は一般不動産と異なる手続きが必要です。専門書で正確な知識を身につけましょう。</p>
-        <div style="display:grid;gap:16px;">
-
-          <div style="background:#fff;border:1px solid #e0ddd8;border-radius:12px;padding:16px;display:grid;grid-template-columns:80px 1fr;gap:14px;align-items:start;">
-            <img src="https://images-na.ssl-images-amazon.com/images/P/4863676441.09.LZZZZZZZ.jpg"
-                 alt="農地転用の手続" style="width:80px;height:112px;object-fit:cover;border-radius:4px;box-shadow:2px 2px 8px rgba(0,0,0,0.15);"
-                 onerror="this.style.display='none'">
-            <div>
-              <div style="font-size:12px;font-weight:700;color:#2d6a4f;background:#d8f3dc;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:6px;">農地転用の入門書</div>
-              <div style="font-size:16px;font-weight:700;margin-bottom:4px;">「農地転用の手続」何をするかがわかる本</div>
-              <div style="font-size:13px;color:#6b6b6b;margin-bottom:8px;">若子昭一 著</div>
-              <div style="font-size:14px;color:#6b6b6b;margin-bottom:10px;">農地転用の基礎知識から手続きの方法・流れまでをわかりやすく解説。農地を宅地や駐車場に転用したい方必読。</div>
-              <a href="https://amzn.to/4dUo6HB" rel="nofollow" style="display:inline-block;background:#FF9900;color:#fff;font-weight:700;padding:10px 18px;border-radius:50px;text-decoration:none;font-size:14px;">🛒 Amazonで見る</a>
-            </div>
-          </div>
-
-          <div style="background:#fff;border:1px solid #e0ddd8;border-radius:12px;padding:16px;display:grid;grid-template-columns:80px 1fr;gap:14px;align-items:start;">
-            <img src="https://images-na.ssl-images-amazon.com/images/P/4817849401.09.LZZZZZZZ.jpg"
-                 alt="農地の相続・農業の承継" style="width:80px;height:112px;object-fit:cover;border-radius:4px;box-shadow:2px 2px 8px rgba(0,0,0,0.15);"
-                 onerror="this.style.display='none'">
-            <div>
-              <div style="font-size:12px;font-weight:700;color:#2d6a4f;background:#d8f3dc;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:6px;">実務者向け専門書</div>
-              <div style="font-size:16px;font-weight:700;margin-bottom:4px;">第2版 事例解説 農地の相続、農業の承継</div>
-              <div style="font-size:13px;color:#6b6b6b;margin-bottom:8px;">高橋宏治ほか 著</div>
-              <div style="font-size:14px;color:#6b6b6b;margin-bottom:10px;">農地・耕作放棄地の権利変動と農家の法人化の実務。令和の農地法改正対応。「後継ぎがいない」「農地を手放したい」相談に対応。</div>
-              <a href="https://amzn.to/4wYYDFw" rel="nofollow" style="display:inline-block;background:#FF9900;color:#fff;font-weight:700;padding:10px 18px;border-radius:50px;text-decoration:none;font-size:14px;">🛒 Amazonで見る</a>
-            </div>
-          </div>
-
-          <div style="background:#fff;border:1px solid #e0ddd8;border-radius:12px;padding:16px;display:grid;grid-template-columns:80px 1fr;gap:14px;align-items:start;">
-            <img src="https://images-na.ssl-images-amazon.com/images/P/4295407844.09.LZZZZZZZ.jpg"
-                 alt="負動産対策" style="width:80px;height:112px;object-fit:cover;border-radius:4px;box-shadow:2px 2px 8px rgba(0,0,0,0.15);"
-                 onerror="this.style.display='none'">
-            <div>
-              <div style="font-size:12px;font-weight:700;color:#2d6a4f;background:#d8f3dc;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:6px;">地主・農家の相続対策</div>
-              <div style="font-size:16px;font-weight:700;margin-bottom:4px;">相続になっても困らない 地主・農家のための"負"動産対策</div>
-              <div style="font-size:13px;color:#6b6b6b;margin-bottom:8px;">沖田豊明・曽根惠子 著</div>
-              <div style="font-size:14px;color:#6b6b6b;margin-bottom:10px;">「土地はあるのに現金がない」地主・農家特有の相続問題を解決。親子3代で財産を無くさない相続の方法。Kindle Unlimited対応。</div>
-              <a href="https://amzn.to/4vlUfin" rel="nofollow" style="display:inline-block;background:#FF9900;color:#fff;font-weight:700;padding:10px 18px;border-radius:50px;text-decoration:none;font-size:14px;">🛒 Amazonで見る</a>
-            </div>
-          </div>
-
-        </div>
-        <p style="font-size:13px;color:#6b6b6b;text-align:center;margin-top:12px;">※農地の転用・相続には農業委員会への届出が必要です。必ず専門家にご相談ください。</p>
-      </div>
-
-      <!-- 家族会議シートPDF -->
-      <div class="pdf-section fade-in">
-        <h3>📄 家族会議シートを無料ダウンロード</h3>
-        <p>
-          この診断結果をもとに、親・兄弟と話し合うための<br>
-          「家族会議シート」をPDFで出力できます。<br>
-          <small style="color:var(--text-sub);">✅ 話し合いで揉めやすいポイントを整理済み ✅ チェックリスト付き ✅ 専門家への質問リスト付き</small>
-        </p>
-        <button class="pdf-btn" onclick="generatePDF()">📄 PDFをダウンロードする（無料）</button>
-      </div>
-
-      <!-- 専門家相談（メインCTA） -->
-      <div class="expert-section">
-        <h3>🤝 無料で専門家に相談する</h3>
-        <p>査定・相談はすべて無料です。<br>複数社に依頼して比較することをおすすめします。<br>
-        <small style="opacity:0.7">※以降の手続きは各提携先の規約が適用されます</small></p>
-        <div class="expert-btn-wrap">
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" rel="nofollow" class="expert-btn">
-            🏠 ミライアスで無料売却査定する
-          </a>
-          <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" alt="">
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+C968T6+56AO+HXD0Y" rel="nofollow" class="expert-btn orange">
-            🏚️ ラクウルで空き家・中古の査定（30秒・即日現金化）
-          </a>
-          <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3VR7+C8KT7E+56AO+BWVTE" alt="">
-        </div>
-        <div class="expert-btn-note">すべて無料・しつこい営業なし・断っても大丈夫</div>
-      </div>
-
-      <button class="restart-btn" onclick="restart()">🔄 最初からやり直す</button>
-    </div>
-
-  </div>
-
-  <!-- ===== コラムセクション ===== -->
-  <div class="column-section">
-    <div class="section-title">📚 実家問題を解決するコラム・書籍</div>
-    <div class="section-sub">よくある疑問・悩みを専門的に解説します</div>
-    <div class="column-grid">
-
-      <div class="column-card">
-        <span class="column-tag">売却</span>
-        <h3 style="cursor:pointer;color:var(--green);" onclick="showPage('article1')">相続した実家、売却すべき？そのままにするリスクとは →</h3>
-        <p>空き家のまま放置すると固定資産税・管理費・老朽化リスクが年々増加します。売却を検討するタイミングと注意点を解説します。</p>
-        <!-- ミライアス -->
-                <a href="column/sell.html class="affili-btn affili-btn-green" style="font-size:17px;padding:14px 16px;">
-          📖 続きを読む →
-        </a>
-      </div>
-
-      <div class="column-card">
-        <span class="column-tag">空き家活用</span>
-        <h3 style="cursor:pointer;color:var(--green);" onclick="showPage('article2')">空き家になった実家を「貸す」選択肢。借上げサービスとは？ →</h3>
-        <p>売却せずに毎月収入を得る方法として、借上げサービスが注目されています。民泊・シェアハウスへの転用で空き家を収益化する仕組みを解説します。</p>
-        <!-- クロスハウス -->
-                <a href="column/rent.html class="affili-btn affili-btn-purple" style="font-size:17px;padding:14px 16px;">
-          📖 続きを読む →
-        </a>
-        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" alt="">
-      </div>
-
-      <div class="column-card">
-        <span class="column-tag">訳あり・借地権</span>
-        <h3 style="cursor:pointer;color:var(--green);" onclick="showPage('article3')">「売れない」と思っている実家でも売れる？訳あり物件の買取とは →</h3>
-        <p>再建築不可・借地権・築50年以上・ゴミ屋敷…。一般市場では売れにくい物件でも専門の買取業者なら対応できる場合があります。</p>
-        <a href="column/wakeari.html class="affili-btn affili-btn-green" style="font-size:16px;padding:13px 16px;">
-          📖 続きを読む →
-        </a>
-        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+BG0062+5TF6+5YJRM" alt="">
-      </div>
-
-      <div class="column-card">
-        <span class="column-tag">リフォーム</span>
-        <h3 style="cursor:pointer;color:var(--green);" onclick="showPage('article4')">実家を売る前にリフォームすべき？費用と効果を徹底比較 →</h3>
-        <p>リフォームで売却価格が上がるケースとそうでないケースがあります。どこをどの程度直すべきか、複数社の見積もりで比較するのが鉄則です。</p>
-        <a href="column/reform.html class="affili-btn affili-btn-orange" style="font-size:16px;padding:13px 16px;">
-          📖 続きを読む →
-        </a>
-        <!-- ※Re:estのリンクに差し替えてください -->
-      </div>
-
-      <div class="column-card">
-        <span class="column-tag">資金調達</span>
-        <h3 style="cursor:pointer;color:var(--green);" onclick="showPage('article5')">実家を担保に資金を借りる「不動産担保ローン」とは？ →</h3>
-        <p>売却はしたくないが介護費・生活費が必要な場合、不動産担保ローンという選択肢があります。リバースモーゲージとの違いも解説します。</p>
-        <a href="column/loan.html class="affili-btn affili-btn-blue" style="font-size:16px;padding:13px 16px;">
-          📖 続きを読む →
-        </a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" alt="">
-      </div>
-
     </div>
   </div>
-
 </div>
 
-<!-- FOOTER -->
+<!-- カテゴリ -->
+<div class="section" id="categories">
+  <div class="section-title">カテゴリから探す</div>
+  <div class="section-sub">状況に合わせて、必要な情報を探してみてください</div>
+  <div class="cat-grid">
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🛏️</div>
+      <div class="cat-name">介護グッズ・用品</div>
+      <div class="cat-desc">ベッド・手すり・おむつ・車椅子など在宅介護を楽にするグッズ</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">📷</div>
+      <div class="cat-name">見守りカメラ・センサー</div>
+      <div class="cat-desc">離れて暮らす親の安全を確認できる見守り機器の選び方</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🍱</div>
+      <div class="cat-name">宅食・介護食</div>
+      <div class="cat-desc">やわらか食・塩分控えめ・栄養バランス対応の宅配弁当サービス</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">📱</div>
+      <div class="cat-name">シニアスマホ・タブレット</div>
+      <div class="cat-desc">高齢の親が使いやすいスマホ・タブレットと設定サポート</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">📋</div>
+      <div class="cat-name">介護保険・制度</div>
+      <div class="cat-desc">申請方法・負担限度額・高額介護合算など制度をわかりやすく解説</div>
+      <span class="cat-tag">情報記事</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🏠</div>
+      <div class="cat-name">在宅介護サービス</div>
+      <div class="cat-desc">訪問介護・デイサービス・ショートステイの選び方と費用</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🛡️</div>
+      <div class="cat-name">介護保険・生命保険</div>
+      <div class="cat-desc">もしもの時に備える保険の選び方・無料相談窓口のご案内</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">💼</div>
+      <div class="cat-name">介護職・転職サポート</div>
+      <div class="cat-desc">介護の仕事に就きたい方・転職を考えている方へ</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🔖</div>
+      <div class="cat-name">終活・エンディングノート</div>
+      <div class="cat-desc">相続・葬儀・遺言など「親亡き後」の準備をはじめるために</div>
+      <span class="cat-tag">Amazon・楽天</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🏡</div>
+      <div class="cat-name">8050問題・ひきこもり</div>
+      <div class="cat-desc">8050問題・ひきこもり家族の介護・自立支援・相談窓口</div>
+      <span class="cat-tag">A8・情報記事</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">💚</div>
+      <div class="cat-name">介護者のメンタルケア</div>
+      <div class="cat-desc">介護疲れ・罪悪感・イライラ…あなた自身を大切にするために</div>
+      <span class="cat-tag">A8アフィリ</span>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-icon">🤖</div>
+      <div class="cat-name">介護×AI・便利サービス</div>
+      <div class="cat-desc">AIを使った見守り・話し相手・健康管理など最新サービス紹介</div>
+      <span class="cat-tag">Amazon・A8</span>
+    </a>
+  </div>
+</div>
 
-<!-- トップに戻るボタン -->
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  ▲ トップへ戻る
-</button>
+<!-- アフィリエイト開示 -->
+<div class="affili-note">
+  <div class="affili-box">
+    📢 <strong>アフィリエイト開示</strong>：当サイトは一部のリンクにアフィリエイト広告（Amazon・楽天市場・A8.net等）を含む場合があります。紹介料はサイト運営に充てられますが、掲載内容の公正性には影響しません。あなたの状況に合った情報提供を最優先にしています。
+  </div>
+</div>
 
-</div><!-- /mainPage -->
-
-<!-- ===== コラム別ページ群 ===== -->
+<!-- 免責 -->
+<div class="disclaimer" id="disclaimer">
+  <div class="disclaimer-box">
+    ⚠️ <strong>免責事項</strong>：当サイトのAI相談および記事は、一般的な情報提供を目的としています。医療・介護の専門的な判断は、かかりつけ医・ケアマネジャー・地域包括支援センターにご相談ください。個別の状況により最適な選択は異なります。「〜の傾向があります」「〜の可能性があります」という表現は断定ではありません。
+  </div>
+</div>
 
 <footer>
-  <div style="font-weight:700;font-size:16px;margin-bottom:10px;">実家どうするナビ</div>
-  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:14px;">
-    <a href="about.html" style="color:var(--green);text-decoration:none;font-size:15px;">運営者情報</a>
-    <a href="https://kaigo-anshin.net" style="color:var(--green);text-decoration:none;font-size:15px;">やさしい介護ナビ</a>
-    <a href="https://sougi-navi.vercel.app" style="color:var(--green);text-decoration:none;font-size:15px;">葬儀ナビ</a>
-    <a href="https://twitter.com/twinklelab_jp" style="color:var(--green);text-decoration:none;font-size:15px;">X @twinklelab_jp</a>
-  </div>
-  <div>本サービスは情報提供を目的としており、不動産売買・金融商品の勧誘・法的判断を行うものではありません。</div>
-  <div style="margin-top:6px;">当サイトはA8.net・Amazonアソシエイトのアフィリエイトプログラムに参加しています。</div>
-  <div style="margin-top:8px;">運営：Twinkle Lab（ぴよ子）｜© 2026 実家どうするナビ</div>
+  <div>やさしい介護ナビ｜突然の介護に悩む家族へ</div>
+  <div style="margin-top:8px"><a href="#">プライバシーポリシー</a>　<a href="#">お問い合わせ</a></div>
+  <div style="margin-top:8px;font-size:11px">© 2026 やさしい介護ナビ. Powered by Twinkle Lab</div>
 </footer>
 
-<!-- 記事1：売却すべき？放置リスク -->
-<div id="article1" class="page">
-  <div class="article-page">
-    <div class="article-header">
-      <button class="article-back" onclick="showPage('mainPage')">← コラム一覧に戻る</button>
-      <div class="article-tag">売却</div>
-      <h1 class="article-title">相続した実家、売却すべき？<br>放置するとどれだけ損をするか</h1>
-      <div class="article-lead">
-        「とりあえずそのままにしておこう」は危険です。空き家を放置すると、資産価値の目減りだけでなく、固定資産税の増加・老朽化リスク・特定空き家指定など、年々コストと問題が膨らみます。
-      </div>
-    </div>
-    <div class="article-body">
-      <h2>空き家放置で起きること——5年間の現実</h2>
-      <p>親が施設に入り、実家が空き家になった。「売るのはかわいそう」「いつか使うかも」と思いながら、何もしないまま数年が過ぎる——これは非常によくあるケースです。しかし、その「放置」は静かに大きなコストを生み続けています。</p>
-      
-      <div class="article-box">
-        <strong>放置5年間の試算（地方都市・戸建て2000万円の場合）</strong><br>
-        ・固定資産税：年15万円 × 5年 = 75万円<br>
-        ・火災保険：年4万円 × 5年 = 20万円<br>
-        ・維持管理（草刈り・清掃等）：年10万円 × 5年 = 50万円<br>
-        ・建物の老朽化による価値下落：推定▲200〜400万円<br>
-        <strong>合計：5年で300〜500万円以上の損失</strong>
-      </div>
-
-      <h2>空き家放置の5大リスク</h2>
-      <h3>① 固定資産税が最大6倍になる</h3>
-      <p>住宅が建っている土地は「住宅用地の特例」として固定資産税が最大1/6に軽減されています。しかし、自治体から「特定空き家」に指定されると、この特例が外れ、固定資産税が最大6倍に跳ね上がります。2023年の法改正により、管理が不十分な「管理不全空き家」への対策も強化されています。</p>
-
-      <h3>② 建物の資産価値が急速に目減りする</h3>
-      <p>人が住まなくなった建物は劣化が急速に進みます。換気されないことで湿気がこもり、カビ・腐食・シロアリ被害が発生しやすくなります。一般的に、空き家になってから5年で建物価値は20〜40%下落するとも言われます。</p>
-
-      <h3>③ 近隣への損害賠償リスク</h3>
-      <p>老朽化した建物の外壁や屋根材が落下して近隣に被害を与えた場合、所有者が損害賠償責任を負う可能性があります。「知らなかった」では済まされないケースが増えています。</p>
-
-      <h3>④ 相続人が増えると売れなくなる</h3>
-      <p>放置している間に親が亡くなり、次の世代へ相続が発生すると、相続人がさらに増えてしまいます。売却には全員の合意が必要なため、一人でも反対すると売れない状態になります。早めに動くほど、意思決定がシンプルです。</p>
-
-      <h3>⑤ 行政代執行による強制解体</h3>
-      <p>危険な状態の空き家は、自治体が所有者に代わって強制解体（行政代執行）を行うことがあります。その費用は後から所有者に請求されます。解体費用は100〜300万円程度が一般的です。</p>
-
-      <h2>売却を検討すべきタイミング</h2>
-      <ul>
-        <li>親が施設に入って1年以上空き家になっている</li>
-        <li>誰も住む予定がない</li>
-        <li>維持管理に手が回らない</li>
-        <li>相続人が複数いて意見が割れそう</li>
-        <li>建物が築30年以上で修繕費がかかりそう</li>
-      </ul>
-
-      <div class="article-data">
-        📊 参考データ：国土交通省「空き家等対策の推進に関する特別措置法」2023年改正により、管理不全空き家への固定資産税特例除外が可能になりました。全国の空き家数は約900万戸（総務省2023年調査）と過去最多を更新しています。
-      </div>
-
-      <h2>まず「今の実家がいくらで売れるか」を知ることから</h2>
-      <p>売却を決断する前に、まず査定を受けることをおすすめします。査定は無料で、断っても問題ありません。「思ったより高く売れる」と分かれば決断しやすくなりますし、「想定より安い」と分かれば今後の戦略を立てやすくなります。</p>
-
-      <div class="article-cta">
-        <h3>🏠 まず無料査定で「実家の今の価値」を確認</h3>
-        <p>査定だけで成約の義務はありません。複数社で比較するのがおすすめです。</p>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" rel="nofollow" class="affili-btn affili-btn-green" style="display:inline-block;max-width:400px;margin:0 auto;">🏠 ミライアスで無料査定する</a>
-        <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" alt="">
-        <br><br>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BG0062+5TF6+5YJRM" rel="nofollow" class="affili-btn" style="display:inline-block;max-width:400px;margin:0 auto;background:#e07b39;color:#fff;">🏚️ 訳あり・空き家でも買取（訳あり物件買取センター）</a>
-        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+BG0062+5TF6+5YJRM" alt="">
-      </div>
-    </div>
-    <button class="article-back" onclick="showPage('mainPage');window.scrollTo({top:0,behavior:'smooth'})">← トップページに戻る</button>
-  </div>
-</div>
-
-<!-- 記事2：空き家を貸す -->
-<div id="article2" class="page">
-  <div class="article-page">
-    <div class="article-header">
-      <button class="article-back" onclick="showPage('mainPage')">← コラム一覧に戻る</button>
-      <div class="article-tag">空き家活用</div>
-      <h1 class="article-title">空き家になった実家を「貸す」選択肢。<br>放置より収入、売却より手元に残る</h1>
-      <div class="article-lead">
-        売りたくない、でも空き家のままにしておくのも不安——そんな方に知ってほしいのが「借上げサービス」です。民泊・シェアハウスとして運用することで、管理の手間なく毎月収入を得られます。
-      </div>
-    </div>
-    <div class="article-body">
-      <h2>空き家を放置するより「貸す」ほうが得な理由</h2>
-      <p>空き家を放置していると、固定資産税・火災保険・管理費が毎年かかります。一方、賃貸や借上げサービスに出せば、これらのコストをカバーしながら収益を得ることができます。</p>
-
-      <div class="article-box">
-        <strong>賃貸 vs 放置 の比較（年間）</strong><br>
-        放置：固定資産税15万＋管理費10万＋保険4万 = <strong>▲29万円/年</strong><br>
-        賃貸：家賃収入60〜120万 − 管理費・修繕費20万 = <strong>+40〜100万円/年</strong><br>
-        <strong>差額：年70〜130万円の差</strong>
-      </div>
-
-      <h2>一般賃貸 vs 借上げサービスの違い</h2>
-      <h3>一般賃貸の注意点</h3>
-      <p>不動産会社を通じて入居者を募集する一般的な方法です。ただし、空室リスク・入居者トラブル・退去後のリフォーム費用など、オーナー側の負担も大きいのが現実です。</p>
-
-      <h3>借上げサービス（サブリース）のメリット</h3>
-      <p>クロスハウスのような借上げサービスは、業者が建物ごと借り上げて管理・運営します。オーナーは管理の手間なく毎月一定の収入を得られます。民泊・シェアハウスへの転用で、一般賃貸より高い収益が見込めるケースもあります。</p>
-      <ul>
-        <li>空室でも一定の収入が入る（保証型の場合）</li>
-        <li>管理・清掃・入居者対応はすべて業者が行う</li>
-        <li>遠方に住んでいても安心して任せられる</li>
-        <li>リフォーム費用を業者が負担するケースもある</li>
-      </ul>
-
-      <div class="article-data">
-        📊 参考：クロスハウスは民泊・シェアハウスの借上げ実績1万室超。空き家・アパート・マンションどれも対応可能。無料で査定を受けられます。
-      </div>
-
-      <div class="article-cta">
-        <h3>🏢 空き家・物件の借上げ査定（無料）</h3>
-        <p>査定だけで契約の義務はありません。まず「いくらで貸せるか」を確認しましょう。</p>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" rel="nofollow" class="affili-btn affili-btn-purple" style="display:inline-block;max-width:400px;margin:0 auto;">🏢 クロスハウスで無料査定する</a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" alt="">
-      </div>
-    </div>
-    <button class="article-back" onclick="showPage('mainPage');window.scrollTo({top:0,behavior:'smooth'})">← トップページに戻る</button>
-  </div>
-</div>
-
-<!-- 記事3：訳あり物件 -->
-<div id="article3" class="page">
-  <div class="article-page">
-    <div class="article-header">
-      <button class="article-back" onclick="showPage('mainPage')">← コラム一覧に戻る</button>
-      <div class="article-tag">訳あり・借地権</div>
-      <h1 class="article-title">「売れない」と思っている実家でも売れる？<br>訳あり物件・借地権の専門買取とは</h1>
-      <div class="article-lead">
-        再建築不可・借地権・築50年以上・ゴミ屋敷……。一般の不動産会社では「難しい」と言われた物件でも、専門の買取業者なら対応できるケースが多くあります。
-      </div>
-    </div>
-    <div class="article-body">
-      <h2>なぜ「売れない」と言われるのか</h2>
-      <p>一般的な不動産仲介では、エンドユーザー（一般の買い手）に売ることを前提にします。そのため、再建築できない土地・権利関係が複雑な物件・老朽化が激しい建物は「売りにくい」と判断され、断られることがあります。</p>
-      <p>しかし、専門の買取業者は自社でリノベーション・再販・活用を行うため、一般市場では売れにくい物件でも買い取ることができます。</p>
-
-      <h2>訳あり物件の主なケース</h2>
-      <ul>
-        <li><strong>再建築不可物件</strong>：接道条件を満たさない土地。一般市場では買い手がつきにくいが専門業者なら対応可</li>
-        <li><strong>借地権物件</strong>：土地は地主のもので建物だけ所有しているケース。権利関係が複雑なため専門知識が必要</li>
-        <li><strong>築50年以上の老朽建物</strong>：解体・更地渡しが条件になることも。専門業者なら現状のまま買取可能なケースも</li>
-        <li><strong>ゴミ屋敷・残置物あり</strong>：片付け費用が心配な方も、残置物そのままで買取できる業者がある</li>
-        <li><strong>遠方・管理できない空き家</strong>：相続した実家が遠方にあり管理できていないケース</li>
-      </ul>
-
-      <div class="article-box">
-        <strong>借地権の買取とは？</strong><br>
-        借地権（土地を借りて建物を建てる権利）は、通常の不動産売買より複雑です。地主との関係・契約内容によって価格が大きく変わります。専門の借地権買取業者なら、地主との交渉も含めてワンストップで対応してくれます。
-      </div>
-
-      <div class="article-cta">
-        <h3>🏚️ まず無料相談・査定を受けてみましょう</h3>
-        <p>どんな状態の物件でも相談OK。断っても費用は一切かかりません。</p>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BG0062+5TF6+5YJRM" rel="nofollow" class="affili-btn affili-btn-green" style="display:inline-block;max-width:400px;margin:0 auto;">訳あり物件買取センターに相談（無料）</a>
-        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3VR7+BG0062+5TF6+5YJRM" alt="">
-        <br><br>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+ATYYSA+5TEW+5YRHE" rel="nofollow" class="affili-btn affili-btn-blue" style="display:inline-block;max-width:400px;margin:0 auto;">借地権 無料相談ドットコムで相談</a>
-        <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3VR7+ATYYSA+5TEW+5YRHE" alt="">
-      </div>
-    </div>
-    <button class="article-back" onclick="showPage('mainPage');window.scrollTo({top:0,behavior:'smooth'})">← トップページに戻る</button>
-  </div>
-</div>
-
-<!-- 記事4：リフォーム -->
-<div id="article4" class="page">
-  <div class="article-page">
-    <div class="article-header">
-      <button class="article-back" onclick="showPage('mainPage')">← コラム一覧に戻る</button>
-      <div class="article-tag">リフォーム</div>
-      <h1 class="article-title">実家を売る前にリフォームすべき？<br>費用対効果と「やってはいけない」リフォーム</h1>
-      <div class="article-lead">
-        「少しきれいにすれば高く売れるのでは」と考えるのは自然なことです。しかし、リフォームすれば必ず売却価格が上がるわけではありません。費用対効果を正しく見極めることが重要です。
-      </div>
-    </div>
-    <div class="article-body">
-      <h2>リフォームで売却価格が上がるケース・上がらないケース</h2>
-      <h3>効果が出やすいリフォーム</h3>
-      <ul>
-        <li>クロス（壁紙）の張り替え：費用10〜30万、清潔感で印象が大幅アップ</li>
-        <li>水回りの清掃・部分補修：キッチン・浴室・トイレの印象改善</li>
-        <li>外壁・屋根の防水処理：雨漏りリスクを取り除き買い手の不安を解消</li>
-        <li>残置物・不用品の撤去：内覧時の第一印象が決定的に変わる</li>
-      </ul>
-      <h3>費用対効果が低いリフォーム</h3>
-      <ul>
-        <li>キッチン・浴室の全面リフォーム：200〜500万かけても価格への反映は50〜100万程度のことも</li>
-        <li>築40年以上の建物への大規模投資：建物自体の価値より土地値が中心になるため回収困難</li>
-        <li>個人の趣味・好みに合わせたデザイン変更：買い手の好みと合わないと逆効果</li>
-      </ul>
-
-      <div class="article-box">
-        <strong>鉄則：「売却前提のリフォーム」は最小限に</strong><br>
-        不動産会社の査定を先に受け、「どこを直せば価格が上がるか」を確認してからリフォームするのが正解です。無計画なリフォームは費用の無駄になることがあります。
-      </div>
-
-      <h2>複数社の見積もり比較が必須な理由</h2>
-      <p>リフォームの見積もりは、同じ内容でも業者によって2〜3倍の差が出ることがあります。1社だけの見積もりで決めてしまうと、相場より高い金額を払うリスクがあります。無料の一括見積もりサービスを活用して、複数社を比較することをおすすめします。</p>
-
-      <div class="article-cta">
-        <h3>🔧 無料でリフォーム見積もりを比較する</h3>
-        <p>複数社から見積もりを取って比較。成約の義務はありません。</p>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BLCWM2+5UT6+5YJRM" rel="nofollow" class="affili-btn affili-btn-orange" style="display:inline-block;max-width:400px;margin:0 auto;">Re:estでリフォーム見積もり比較（無料）</a>
-        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3VR7+BLCWM2+5UT6+5YJRM" alt="">
-        <br><br>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+C5LN6I+46CI+NTJWY" rel="nofollow" class="affili-btn affili-btn-blue" style="display:inline-block;max-width:400px;margin:0 auto;">防水工事の一括見積もり（防水セレクトナビ）</a>
-        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3VR7+C5LN6I+46CI+NTJWY" alt="">
-      </div>
-    </div>
-    <button class="article-back" onclick="showPage('mainPage');window.scrollTo({top:0,behavior:'smooth'})">← トップページに戻る</button>
-  </div>
-</div>
-
-<!-- 記事5：不動産担保ローン -->
-<div id="article5" class="page">
-  <div class="article-page">
-    <div class="article-header">
-      <button class="article-back" onclick="showPage('mainPage')">← コラム一覧に戻る</button>
-      <div class="article-tag">資金調達</div>
-      <h1 class="article-title">実家を担保に資金を借りる<br>「不動産担保ローン」とリバースモーゲージの違い</h1>
-      <div class="article-lead">
-        売却はしたくないが介護費・生活費が足りない——そんな場合に知っておきたい資金調達の選択肢を解説します。リバースモーゲージと不動産担保ローン、どちらがどんな人に向いているのか。
-      </div>
-    </div>
-    <div class="article-body">
-      <h2>2つの仕組みの違い</h2>
-      <div class="article-box">
-        <strong>リバースモーゲージ</strong>：自宅を担保に金融機関から毎月一定額を受け取る。死亡時に不動産を売却して返済。主に60歳以上向け。<br><br>
-        <strong>不動産担保ローン</strong>：不動産を担保に一括または分割で融資を受ける。返済義務あり。年齢・用途制限が少なく柔軟。
-      </div>
-
-      <h2>どちらが向いているか</h2>
-      <h3>リバースモーゲージが向いている人</h3>
-      <ul>
-        <li>65歳以上で自宅に住み続けたい</li>
-        <li>年金だけでは生活費が足りない</li>
-        <li>相続人が少ない・相続財産を残す必要がない</li>
-        <li>毎月一定額を受け取りたい</li>
-      </ul>
-      <h3>不動産担保ローンが向いている人</h3>
-      <ul>
-        <li>まとまった資金が必要（介護費・リフォーム・事業資金など）</li>
-        <li>年齢・収入で通常のローンが組めない</li>
-        <li>複数の不動産を持っている</li>
-        <li>審査を早急に進めたい（最短即日の業者もある）</li>
-      </ul>
-
-      <div class="article-data">
-        📊 注意点：不動産担保ローンは金利が通常ローンより高めになることがあります。複数社で条件を比較することが重要です。また、返済できない場合は担保不動産が競売にかけられるリスクがあります。必ず専門家への相談を。
-      </div>
-
-      <div class="article-cta">
-        <h3>💰 不動産担保ローンの無料審査を受ける</h3>
-        <p>審査だけで契約の義務はありません。まず条件を確認しましょう。</p>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" rel="nofollow" class="affili-btn affili-btn-blue" style="display:inline-block;max-width:400px;margin:0 auto;">丸の内AMSで無料審査申込（審査最短即日）</a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" alt="">
-        <br><br>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CI3QVU+3GA6+639IQ" rel="nofollow" class="affili-btn" style="display:inline-block;max-width:400px;margin:0 auto;background:#475569;color:#fff;">JFC 不動産担保ローンに問い合わせ</a>
-        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3VR7+CI3QVU+3GA6+639IQ" alt="">
-      </div>
-    </div>
-    <button class="article-back" onclick="showPage('mainPage');window.scrollTo({top:0,behavior:'smooth'})">← トップページに戻る</button>
-  </div>
-</div>
-
-
 <script>
-// 郵便番号入力処理
-function onZipInput(val) {
-  const nums = val.replace(/[^0-9]/g, '');
-  if (nums.length >= 4) {
-    document.getElementById('zipInput').value = nums.slice(0,3) + '-' + nums.slice(3,7);
-  }
-  if (nums.length === 7) searchZip();
+const sel = {};
+
+function pick(el, group) {
+  document.querySelectorAll(`#chips-${group} .chip`).forEach(c => c.classList.remove('sel'));
+  el.classList.add('sel');
+  sel[group] = el.textContent.trim();
 }
 
-async function searchZip() {
-  const zip = document.getElementById('zipInput').value.replace(/-/g,'');
-  const status = document.getElementById('zipStatus');
-  if (zip.length !== 7) {
-    status.textContent = '7桁の郵便番号を入力してください';
-    status.style.color = 'var(--amber)';
-    return;
-  }
-  status.textContent = '検索中...';
+async function callAI(prompt) {
+  const wrap = document.getElementById('response-wrap');
+  const txt = document.getElementById('response-text');
+  const footer = document.getElementById('response-footer');
+  wrap.style.display = 'block';
+  txt.innerHTML = '<span class="loading-dots"><span>●</span><span>●</span><span>●</span></span> AIが考えています…';
+  footer.style.display = 'none';
+
   try {
-    const res = await fetch('https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + zip);
-    const json = await res.json();
-    if (json.results) {
-      const r = json.results[0];
-      document.getElementById('prefDisplay').value = r.address1;
-      document.getElementById('cityDisplay').value = r.address2;
-      data.pref = r.address1;
-      data.city = r.address2;
-      data.zip = zip;
-      status.textContent = '✓ ' + r.address1 + r.address2 + ' が見つかりました';
-      status.style.color = 'var(--green)';
-    } else {
-      status.textContent = '住所が見つかりませんでした';
-      status.style.color = '#c03030';
-    }
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.map(b => b.text || '').join('') || 'エラーが発生しました。';
+    txt.textContent = text;
+    footer.style.display = 'block';
   } catch(e) {
-    status.textContent = '通信エラーが発生しました';
-    status.style.color = '#c03030';
+    txt.textContent = 'エラーが発生しました。しばらくしてから再度お試しください。';
   }
 }
 
-const data = { age:'', pref:'', city:'', zip:'', type:'', status:'', farmland:'', age2:'', heirs:'', pension:'' };
+async function askAI() {
+  const concern = document.getElementById('concern').value.trim();
+  if (!concern) { alert('相談内容を入力してください'); return; }
 
-function select(btn, key, val) {
-  const group = btn.closest('.choice-grid');
-  group.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-  data[key] = val;
-}
+  document.getElementById('btn-ask').disabled = true;
 
-function goStep2() {
-  if (!data.age || !data.pref || !data.type || !data.status || !data.farmland) {
-    alert('すべての項目を入力・選択してください。\n郵便番号から住所を検索してください。\n農地の有無も選択してください。');
-    return;
-  }
-  document.getElementById('step1').classList.add('hidden');
-  document.getElementById('step2').classList.remove('hidden');
-  document.getElementById('dot1').classList.remove('active');
-  document.getElementById('dot1').classList.add('done');
-  document.getElementById('line1').classList.add('done');
-  document.getElementById('dot2').classList.add('active');
-  window.scrollTo({top: document.getElementById('shindan').offsetTop - 60, behavior: 'smooth'});
-}
+  const relation = sel['rel'] || '未回答';
+  const place = sel['place'] || '未回答';
+  const level = sel['level'] || '未回答';
 
-function goStep2FromResult() {
-  document.getElementById('resultSection').style.display = 'none';
-  document.getElementById('step2').classList.remove('hidden');
-  document.getElementById('step1').classList.add('hidden');
-  document.getElementById('detailPrompt').style.display = 'none';
-  window.scrollTo({top: document.getElementById('shindan').offsetTop - 60, behavior: 'smooth'});
-}
+  const prompt = `あなたは「やさしい介護ナビ」の専属サポートAIです。
 
-function calcPrice() {
-  const prefCoef = {
-    '東京都':1.8,'神奈川県':1.4,'大阪府':1.2,'愛知県':1.1,'千葉県':1.1,'埼玉県':1.0,
-    '京都府':1.1,'兵庫県':1.0,'福岡県':0.9,'北海道':0.7,'沖縄県':0.8
-  };
-  const coef = prefCoef[data.pref] || 0.85;
-  const base = data.type === 'マンション' ? 2500 : 2000;
-  const ageCoef = {'20年以内':1.3,'21-30年':1.0,'31-40年':0.75,'41年以上':0.55}[data.age2] || 1.0;
-  const mid = Math.round(base * coef * ageCoef / 100) * 100;
-  const low = Math.round(mid * 0.75 / 100) * 100;
-  const high = Math.round(mid * 1.3 / 100) * 100;
-  return { low, mid, high };
+【絶対ルール】
+- 説教・精神論・「頑張って」は禁止
+- 「すぐ施設へ」だけで終わらない
+- 医療・介護の断定表現禁止（「〜の傾向があります」「〜の可能性があります」を使う）
+- 読者を責めない・否定しない
+- 「今できる小さな一歩」を必ず提示する
+- 専門用語は噛み砕く
+- 300〜400文字でまとめる
+- 最後に地域包括支援センターへの案内を一言添える
+
+【相談者の状況】
+- 関係：${relation}
+- 場所・状況：${place}
+- 介護度：${level}
+- 相談内容：${concern}
+
+温かく、落ち着いたトーンで、今できることを整理してください。`;
+
+  await callAI(prompt);
+  document.getElementById('btn-ask').disabled = false;
 }
 
-function showResult() {
-  document.getElementById('step1').classList.add('hidden');
-  document.getElementById('step2').classList.add('hidden');
-  document.getElementById('dot2').classList.remove('active');
-  document.getElementById('dot2').classList.add('done');
-  document.getElementById('line2').classList.add('done');
-  document.getElementById('dot3').classList.add('active');
+async function ugochi() {
+  document.getElementById('btn-ugochi').disabled = true;
 
-  const p = calcPrice();
-  document.getElementById('priceRange').textContent =
-    `${p.low.toLocaleString()}万円 〜 ${p.high.toLocaleString()}万円`;
-  document.getElementById('priceNote').textContent =
-    `${data.pref}${data.city}の${data.type}（参考値・誤差±25〜35%）`;
+  const prompt = `あなたは「やさしい介護ナビ」の共感サポートAIです。
 
-  const rent = data.type === 'マンション' ? Math.round(p.mid * 0.004) : Math.round(p.mid * 0.003);
-  const rv = Math.round(p.mid * 0.5 / 100) * 100;
-  const revM = Math.round(rv * 0.006);
+介護で「もう疲れた」「限界かも」と感じている人が来ています。
 
-  const cards = [
-    {
-      icon:'💴', iconClass:'icon-sell', title:'売却', sub:'まとまった資金を確保',
-      rows:[
-        {label:'推定手取り', value:`${Math.round(p.mid*0.9/100)*100}万円前後`},
-        {label:'空き家リスク', value:'<span class="risk-badge risk-low">解消</span>'},
-        {label:'管理の手間', value:'<span class="risk-badge risk-low">なくなる</span>'},
-      ],
-      comment:'売却を選んだ場合、まとまった資金を確保しやすい一方で、親御さんの住まいの確保や家族間の合意形成が重要になります。',
-      affili: `
-      <div style="display:grid;gap:10px;margin-top:14px;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" rel="nofollow" class="affili-btn affili-btn-green" style="font-size:16px;padding:14px;">🏠 ミライアスで無料査定する</a>
-        <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B3VR7+BMJRTM+4I6M+5YJRM" alt="">
-        <a href="column/sell.html" class="affili-btn" style="background:#f0f0ee;color:#1a7a5e;font-size:15px;padding:12px;border:2px solid #1a7a5e;">📖 「放置すると損」の記事を読む</a>
-        <a href="column/books.html" class="affili-btn" style="background:#f5f5f3;color:#1a1a1a;font-size:15px;padding:11px;border:2px solid #e0ddd8;">📚 関連書籍を見る（12冊）</a>
-      </div>`
-    },
-    {
-      icon:'🔑', iconClass:'icon-rent', title:'賃貸に出す・借上げ', sub:'毎月の収入を確保',
-      rows:[
-        {label:'想定賃料', value:`月${rent}〜${rent+2}万円`},
-        {label:'空き家リスク', value:'<span class="risk-badge risk-mid">軽減</span>'},
-        {label:'管理の手間', value:'<span class="risk-badge risk-mid">必要</span>'},
-      ],
-      comment:'住み続けながら一部を貸す、または空き家を借上げサービスに出す選択肢です。クロスハウスなら民泊・シェアハウスとして活用可能です。',
-      affili: `
-      <div style="display:grid;gap:10px;margin-top:14px;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" rel="nofollow" class="affili-btn affili-btn-purple" style="font-size:16px;padding:14px;">🏢 クロスハウスで借上げ無料査定</a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3VR7+B72I3E+4EZ2+NTJWY" alt="">
-        <a href="column/rent.html" class="affili-btn" style="background:#f0f0ee;color:#7c3aed;font-size:15px;padding:12px;border:2px solid #7c3aed;">📖 「借上げサービス」の記事を読む</a>
-        <a href="column/books.html#cat2" class="affili-btn" style="background:#f5f5f3;color:#1a1a1a;font-size:15px;padding:11px;border:2px solid #e0ddd8;">📚 関連書籍を見る（12冊）</a>
-      </div>`
-      // ※クロスハウスのリンクに差し替えてください
-    },
-    {
-      icon:'🏠', iconClass:'icon-stay', title:'住み続ける', sub:'現状を維持する',
-      rows:[
-        {label:'一時金', value:'なし（現状維持）'},
-        {label:'空き家リスク', value:'<span class="risk-badge risk-high">将来高まる</span>'},
-        {label:'管理の手間', value:'<span class="risk-badge risk-mid">継続</span>'},
-      ],
-      comment:'現状を維持する安心感がある一方で、将来の空き家・介護・施設入所との兼ね合いを早めに整理しておくことが重要です。',
-      affili: `
-      <div style="display:grid;gap:10px;margin-top:14px;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+C8KT7E+56AO+BWVTE" rel="nofollow" class="affili-btn" style="background:#475569;color:#fff;font-size:16px;padding:14px;">📋 相続の窓口に無料相談する</a>
-        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3VR7+C8KT7E+56AO+BWVTE" alt="">
-        <a href="column/sell.html" class="affili-btn" style="background:#f0f0ee;color:#475569;font-size:15px;padding:12px;border:2px solid #475569;">📖 「放置リスク」の記事を読む</a>
-        <a href="column/books.html" class="affili-btn" style="background:#f5f5f3;color:#1a1a1a;font-size:15px;padding:11px;border:2px solid #e0ddd8;">📚 関連書籍を見る（12冊）</a>
-      </div>`
-    },
-    {
-      icon:'📊', iconClass:'icon-rev', title:'リバースモーゲージ・担保ローン', sub:'住みながら資金化',
-      rows:[
-        {label:'月額受取目安', value:`月${revM}〜${revM+3}万円`},
-        {label:'空き家リスク', value:'<span class="risk-badge risk-low">解消しない</span>'},
-        {label:'相続への影響', value:'<span class="risk-badge risk-mid">残債あり</span>'},
-      ],
-      comment:'自宅に住み続けたい場合の資金調達手段です。不動産担保ローンは審査最短即日のサービスもあります。',
-      affili: `
-      <div style="display:grid;gap:10px;margin-top:14px;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" rel="nofollow" class="affili-btn affili-btn-blue" style="font-size:16px;padding:14px;">💰 丸の内AMSで無料審査申込</a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3VR7+CGBG2I+5PBE+5YJRM" alt="">
-        <a href="column/loan.html" class="affili-btn" style="background:#f0f0ee;color:#2563eb;font-size:15px;padding:12px;border:2px solid #2563eb;">📖 「担保ローン」の記事を読む</a>
-        <a href="column/books.html#cat4" class="affili-btn" style="background:#f5f5f3;color:#1a1a1a;font-size:15px;padding:11px;border:2px solid #e0ddd8;">📚 関連書籍を見る（12冊）</a>
-      </div>`
-      // ※丸の内AMSのリンクに差し替えてください
-    }
-  ];
+【絶対ルール】
+- まず全力で共感・肯定する
+- 「頑張って」は絶対に言わない
+- 疲れることは当然だと伝える
+- 罪悪感を持たなくていいと伝える
+- 小さな休息の取り方を1〜2つだけ提案する
+- 最後に「一人で抱え込まなくていい」と伝える
+- 250文字程度で、温かく、短く
 
-  const grid = document.getElementById('resultGrid');
-  grid.innerHTML = cards.map(c => `
-    <div class="result-card fade-in">
-      <div class="result-card-head">
-        <div class="result-icon ${c.iconClass}">${c.icon}</div>
-        <div>
-          <div class="result-card-title">${c.title}</div>
-          <div class="result-card-subtitle">${c.sub}</div>
-        </div>
-      </div>
-      ${c.rows.map(r=>`
-        <div class="result-row">
-          <div class="result-row-label">${r.label}</div>
-          <div class="result-row-value">${r.value}</div>
-        </div>
-      `).join('')}
-      <div class="result-comment">${c.comment}</div>
-      ${c.affili}
-    </div>
-  `).join('');
+介護で限界を感じているこの方への言葉をください。`;
 
-  document.getElementById('resultSection').style.display = 'block';
-
-  // 農地ありの場合：農地書籍セクションを表示
-  const farmlandSection = document.getElementById('farmlandBookSection');
-  if (data.farmland === 'あり') {
-    farmlandSection.style.display = 'block';
-  } else {
-    farmlandSection.style.display = 'none';
-  }
-  window.scrollTo({top: document.getElementById('shindan').offsetTop - 60, behavior: 'smooth'});
-}
-
-// PDF生成
-function generatePDF() {
-  const p = calcPrice();
-  const win = window.open('', '_blank');
-  const statusLabel = {独居:'一人暮らし',夫婦:'夫婦で居住',施設:'施設入所中',空き家:'空き家'}[data.status] || '未入力';
-  const pensionLabel = {少ない:'10万円未満',普通:'10〜15万円',多め:'15万円以上'}[data.pension] || '未入力';
-  const situationAdvice = (() => {
-    if (data.status === '施設' || data.status === '空き家') return '既に施設入所または空き家の状態です。管理コスト・固定資産税・老朽化リスクが年々増加します。売却・賃貸など出口の検討を優先されることをおすすめします。';
-    if (data.age === '80以上' && data.status === '独居') return '80代以上の独居は、急な入院・施設入所により実家が空き家になるリスクが高い状況です。早めに家族で方針を決めておくことが重要です。';
-    if (data.heirs === '3人以上') return '相続人が3人以上いる場合、売却・賃貸・相続いずれの選択肢も全員の合意が必要です。今のうちから方針を共有しておきましょう。';
-    if (data.pension === '少ない') return '年金収入が少ない場合、実家を活用した資金確保（売却一時金・リバースモーゲージ）が生活の安定につながる可能性があります。';
-    return '今すぐ動く必要はありませんが、親御さんが元気なうちに家族で方針を話し合っておくことで、将来の選択肢が広がります。';
-  })();
-  const rv = Math.round(p.mid * 0.5 / 100) * 100;
-  const rent = data.type === 'マンション' ? Math.round(p.mid * 0.004) : Math.round(p.mid * 0.003);
-  const revM = Math.round(rv * 0.006);
-
-  win.document.write(`<!DOCTYPE html><html lang="ja"><head>
-  <meta charset="UTF-8"><title>家族会議シート｜実家どうするナビ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Noto Sans JP',sans-serif;max-width:720px;margin:0 auto;padding:36px 32px;color:#1a1a1a;font-size:15px;line-height:1.9;background:#fff;}
-    .doc-header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid #1a7a5e;padding-bottom:12px;margin-bottom:6px;}
-    .doc-title{font-size:28px;font-weight:700;color:#1a7a5e;}
-    .doc-meta{font-size:13px;color:#888;text-align:right;line-height:1.8;}
-    h2{font-size:16px;font-weight:700;color:#fff;background:#1a7a5e;padding:6px 12px;margin:20px 0 10px;border-radius:4px;}
-    h3{font-size:15px;font-weight:700;color:#1a7a5e;margin:14px 0 6px;border-left:3px solid #1a7a5e;padding-left:8px;}
-    .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e0ddd8;border:1px solid #e0ddd8;border-radius:6px;overflow:hidden;margin-bottom:4px;}
-    .info-cell{background:#fff;padding:8px 10px;}
-    .info-cell.head{background:#f5f5f3;}
-    .info-label{font-size:12px;color:#888;margin-bottom:2px;}
-    .info-val{font-weight:700;font-size:15px;}
-    .price-box{background:#e8f5f0;border:1px solid #b8ddd0;border-radius:8px;padding:14px 18px;margin-bottom:4px;display:flex;align-items:center;gap:24px;}
-    .price-main{font-size:26px;font-weight:700;color:#1a1a1a;}
-    .price-sub{font-size:13px;color:#666;line-height:1.6;}
-    .advice-box{background:#fdf0e8;border-left:4px solid #e07b39;border-radius:0 6px 6px 0;padding:12px 16px;font-size:14px;color:#4a3010;line-height:1.7;margin-bottom:4px;}
-    .compare-table{width:100%;border-collapse:collapse;margin-bottom:4px;font-size:13px;}
-    .compare-table th{background:#1a7a5e;color:#fff;padding:9px 10px;text-align:left;font-weight:500;}
-    .compare-table td{padding:9px 10px;border-bottom:1px solid #e8e8e8;vertical-align:top;}
-    .compare-table tr:nth-child(even) td{background:#fafaf8;}
-    .opt-name{font-weight:700;font-size:15px;}
-    .opt-amount{font-size:14px;color:#1a7a5e;font-weight:700;}
-    .tag-good{display:inline-block;background:#e8f5f0;color:#1a7a5e;border-radius:3px;padding:2px 6px;font-size:12px;font-weight:700;margin-right:2px;}
-    .tag-warn{display:inline-block;background:#fdf0e8;color:#c07030;border-radius:3px;padding:2px 6px;font-size:12px;font-weight:700;margin-right:2px;}
-    .tag-risk{display:inline-block;background:#fde8e8;color:#c03030;border-radius:3px;padding:2px 6px;font-size:12px;font-weight:700;margin-right:2px;}
-    .check-section{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;}
-    .check-list{list-style:none;padding:0;}
-    .check-list li{padding:8px 0;border-bottom:1px solid #efefef;font-size:14px;display:flex;align-items:flex-start;gap:6px;line-height:1.5;}
-    .check-box{width:16px;height:16px;border:1.5px solid #1a7a5e;border-radius:2px;flex-shrink:0;margin-top:1px;}
-    .qa-table{width:100%;border-collapse:collapse;font-size:12px;}
-    .qa-table th{background:#f5f5f3;padding:8px 12px;text-align:left;border:1px solid #e0ddd8;font-weight:500;color:#444;}
-    .qa-table td{padding:8px 12px;border:1px solid #e0ddd8;vertical-align:top;line-height:1.6;}
-    .memo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-    .memo-box{border:1.5px solid #c8ddd5;border-radius:6px;padding:12px 14px;background:#fafff9;}
-    .memo-label{font-size:14px;color:#1a7a5e;margin-bottom:8px;font-weight:700;border-bottom:1px solid #c8ddd5;padding-bottom:4px;}
-    .memo-lines{border-bottom:1.5px solid #c8c8c8;height:26px;margin-bottom:6px;}
-    .step-list{list-style:none;padding:0;counter-reset:step;}
-    .step-list li{counter-increment:step;padding:10px 0 10px 40px;border-bottom:1px solid #efefef;position:relative;font-size:14px;line-height:1.6;}
-    .step-list li::before{content:counter(step);position:absolute;left:0;top:10px;width:26px;height:26px;background:#1a7a5e;color:#fff;border-radius:50%;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;line-height:22px;}
-    .footer-note{background:#f5f5f3;border-radius:6px;padding:12px 16px;font-size:12px;color:#888;line-height:1.7;margin-top:20px;}
-    @media print{
-      body{padding:16px 20px;}
-      h2{-webkit-print-color-adjust:exact;print-color-adjust:exact;background:#1a7a5e !important;color:#fff !important;}
-      .step-list li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;background:#1a7a5e !important;color:#fff !important;}
-    }
-  
-/* トップに戻るボタン（固定） */
-.back-to-top {
-  position: fixed;
-  bottom: 24px;
-  right: 20px;
-  background: var(--green);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 14px 24px;
-  font-size: 17px;
-  font-weight: 700;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  z-index: 200;
-  transition: opacity 0.3s, transform 0.2s;
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.back-to-top.visible { opacity: 1; pointer-events: auto; }
-.back-to-top:hover { transform: translateY(-2px); background: var(--green-mid); }
-
-/* コラム別ページ */
-.page { display: none; }
-.page.active { display: block; }
-#mainPage { display: block; }
-
-/* コラム記事ページ */
-.article-page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 24px 16px 60px;
-}
-.article-header {
-  padding: 32px 0 24px;
-  border-bottom: 2px solid var(--border);
-  margin-bottom: 28px;
-}
-.article-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--green);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-bottom: 16px;
-  background: none;
-  border: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  padding: 0;
-}
-.article-back:hover { text-decoration: underline; }
-.article-tag {
-  display: inline-block;
-  background: var(--green-light);
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 12px;
-  border-radius: 20px;
-  margin-bottom: 12px;
-}
-.article-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(20px, 4vw, 26px);
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-.article-lead {
-  font-size: 17px;
-  color: var(--text-sub);
-  line-height: 1.8;
-  padding: 16px;
-  background: var(--green-light);
-  border-radius: 8px;
-  border-left: 4px solid var(--green);
-}
-.article-body h2 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 22px;
-  color: var(--green);
-  margin: 32px 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--green-light);
-}
-.article-body h3 {
-  font-size: 19px;
-  font-weight: 700;
-  margin: 20px 0 8px;
-}
-.article-body p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 16px;
-  color: var(--text);
-}
-.article-body ul {
-  padding-left: 20px;
-  margin-bottom: 16px;
-}
-.article-body ul li {
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 6px;
-}
-.article-box {
-  background: var(--amber-light);
-  border: 1px solid #f0c8a0;
-  border-radius: 8px;
-  padding: 16px 18px;
-  margin: 20px 0;
-  font-size: 17px;
-  line-height: 1.8;
-}
-.article-box strong { color: var(--amber); }
-.article-data {
-  background: var(--gray-light);
-  border-radius: 8px;
-  padding: 16px 18px;
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--text-sub);
-}
-.article-cta {
-  background: linear-gradient(135deg, #1a7a5e, #2d9e7a);
-  border-radius: var(--radius);
-  padding: 24px;
-  text-align: center;
-  margin: 32px 0;
-  color: white;
-}
-.article-cta h3 { font-size: 16px; margin-bottom: 8px; }
-.article-cta p { font-size: 13px; opacity: 0.9; margin-bottom: 16px; }
-
-</style></head><body>
-  <div class="doc-header">
-    <div><div class="doc-title">🏠 家族会議シート</div><div style="font-size:12px;color:#1a7a5e;margin-top:2px;">実家どうするナビ</div></div>
-    <div class="doc-meta">作成日：${new Date().toLocaleDateString('ja-JP')}<br>jikka-navi.net</div>
-  </div>
-  <h2>📋 入力情報</h2>
-  <div class="info-grid">
-    <div class="info-cell head"><div class="info-label">年齢</div><div class="info-val">${data.age||'未入力'}</div></div>
-    <div class="info-cell head"><div class="info-label">所在地</div><div class="info-val">${data.pref||''}${data.city||''}</div></div>
-    <div class="info-cell head"><div class="info-label">建物種類</div><div class="info-val">${data.type||'未入力'}</div></div>
-    <div class="info-cell head"><div class="info-label">現在の状況</div><div class="info-val">${statusLabel}</div></div>
-    <div class="info-cell"><div class="info-label">築年数</div><div class="info-val">${data.age2||'未入力'}</div></div>
-    <div class="info-cell"><div class="info-label">相続人</div><div class="info-val">${data.heirs||'未入力'}</div></div>
-    <div class="info-cell"><div class="info-label">年金月額</div><div class="info-val">${pensionLabel}</div></div>
-    <div class="info-cell"><div class="info-label">作成者</div><div class="info-val" style="font-size:11px;">（記入してください）</div></div>
-  </div>
-  <h2>🏠 概算価格レンジ</h2>
-  <div class="price-box">
-    <div><div style="font-size:11px;color:#666;margin-bottom:4px;">推定売却価格レンジ（参考値）</div><div class="price-main">${p.low.toLocaleString()}万円 〜 ${p.high.toLocaleString()}万円</div></div>
-    <div class="price-sub">※国土交通省公開データに基づく概算<br>※誤差±25〜35%。実際の査定は不動産会社へ</div>
-  </div>
-  <h2>💡 今の状況へのアドバイス</h2>
-  <div class="advice-box">${situationAdvice}</div>
-  <h2>📊 4つの選択肢の比較</h2>
-  <table class="compare-table">
-    <tr><th style="width:14%">選択肢</th><th style="width:18%">概算金額</th><th style="width:25%">メリット</th><th style="width:25%">注意点</th><th style="width:18%">向いているケース</th></tr>
-    <tr><td><div class="opt-name">💴 売却</div></td><td><div class="opt-amount">一時金<br>${Math.round(p.mid*0.9/100)*100}万円前後</div></td><td><span class="tag-good">資金化</span><span class="tag-good">管理不要</span></td><td><span class="tag-warn">家族合意</span><span class="tag-risk">譲渡所得税</span></td><td>施設入所済・空き家</td></tr>
-    <tr><td><div class="opt-name">🔑 賃貸</div></td><td><div class="opt-amount">月収入<br>${rent}〜${rent+2}万円/月</div></td><td><span class="tag-good">継続収入</span><span class="tag-good">資産保有</span></td><td><span class="tag-warn">管理の手間</span><span class="tag-risk">修繕費用</span></td><td>施設入所・資産を残したい</td></tr>
-    <tr><td><div class="opt-name">🏠 住み続ける</div></td><td><div class="opt-amount">一時金なし</div></td><td><span class="tag-good">安心感</span></td><td><span class="tag-risk">空き家リスク増</span></td><td>親が健在・検討中</td></tr>
-    <tr><td><div class="opt-name">📊 担保ローン</div></td><td><div class="opt-amount">月受取<br>${revM}〜${revM+3}万円/月</div></td><td><span class="tag-good">住みながら資金化</span></td><td><span class="tag-risk">残債が相続に影響</span></td><td>売却したくない・年金不足</td></tr>
-  </table>
-  <div style="page-break-before: always;"></div>
-  <h2>💬 家族で話し合うポイント</h2>
-  <div class="check-section">
-    <div>
-      <h3>親の気持ち・希望</h3>
-      <ul class="check-list">
-        <li><div class="check-box"></div>今の家に住み続けたいか</li>
-        <li><div class="check-box"></div>売却することへの気持ちは</li>
-        <li><div class="check-box"></div>施設入所を考えているか</li>
-        <li><div class="check-box"></div>財産を子どもに残したいか</li>
-      </ul>
-      <h3>お金・生活のこと</h3>
-      <ul class="check-list">
-        <li><div class="check-box"></div>毎月の生活費は年金で足りているか</li>
-        <li><div class="check-box"></div>介護・医療費の備えはあるか</li>
-        <li><div class="check-box"></div>固定資産税・修繕費の負担は誰が担うか</li>
-      </ul>
-    </div>
-    <div>
-      <h3>子ども・兄弟の意見</h3>
-      <ul class="check-list">
-        <li><div class="check-box"></div>誰かが実家に住む可能性はあるか</li>
-        <li><div class="check-box"></div>兄弟間で意見の違いはないか</li>
-        <li><div class="check-box"></div>相続の方針は共有されているか</li>
-      </ul>
-      <h3>将来のリスク</h3>
-      <ul class="check-list">
-        <li><div class="check-box"></div>空き家になった場合の管理は誰がするか</li>
-        <li><div class="check-box"></div>親が急に入院した場合の対応は</li>
-        <li><div class="check-box"></div>遺言書・エンディングノートはあるか</li>
-      </ul>
-    </div>
-  </div>
-  <h2>✏️ 家族会議メモ欄</h2>
-  <div class="memo-grid">
-    <div class="memo-box"><div class="memo-label">親の意見・希望</div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div></div>
-    <div class="memo-box"><div class="memo-label">子ども・兄弟の意見</div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div></div>
-    <div class="memo-box"><div class="memo-label">決まったこと・方針</div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div></div>
-    <div class="memo-box"><div class="memo-label">次回話し合う日・担当</div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div><div class="memo-lines"></div></div>
-  </div>
-  <h2>🗓️ 次のステップ</h2>
-  <ol class="step-list">
-    <li>このシートを家族（兄弟・親）と共有し、それぞれの意見を聞いてみる</li>
-    <li>不動産会社に無料査定を依頼し、実際の売却価格レンジを確認する（ミライアス・ラクウル）</li>
-    <li>必要に応じてFP・税理士・司法書士に相談し、税金・相続の具体的な数字を把握する</li>
-    <li>家族全員が納得できる方針を決め、期限（いつまでに決める）を設定する</li>
-    <li>決まった方針を実行する（売却・賃貸・リバースモーゲージの申込など）</li>
-  </ol>
-  <div class="footer-note">⚠️【免責】本シートの金額はすべて参考値であり、実際の取引価格を保証するものではありません。最終判断は専門家にご相談ください。｜実家どうするナビ jikka-navi.net</div>
-  <script>window.print();<\/script>
-  </body></html>`);
-  win.document.close();
-}
-
-function restart() {
-  Object.keys(data).forEach(k => data[k] = '');
-  document.getElementById('step1').classList.remove('hidden');
-  document.getElementById('step2').classList.add('hidden');
-  document.getElementById('resultSection').style.display = 'none';
-  document.getElementById('detailPrompt').style.display = 'block';
-  document.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
-  ['zipInput','prefDisplay','cityDisplay'].forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
-  document.getElementById('zipStatus').textContent = '';
-  document.getElementById('dot1').className = 'step-dot active';
-  document.getElementById('dot2').className = 'step-dot';
-  document.getElementById('dot3').className = 'step-dot';
-  document.getElementById('line1').className = 'step-line';
-  document.getElementById('line2').className = 'step-line';
-  window.scrollTo({top:0, behavior:'smooth'});
+  await callAI(prompt);
+  document.getElementById('btn-ugochi').disabled = false;
 }
 </script>
 </body>
