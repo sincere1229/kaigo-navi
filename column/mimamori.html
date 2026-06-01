@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>離れて暮らす親を見守る——カメラ・センサーの種類と選び方｜やさしい介護ナビ</title>
+<meta name="description" content="見守りカメラ・センサーの種類と選び方を解説。Wi-Fi対応・スマホ確認・音声通話機能など比較してAmazon・楽天で購入。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--green:#2d7a5f;--green-light:#e8f5f0;--green-mid:#4a9e80;--green-dark:#1a5c44;--amber:#c8833a;--amber-light:#fdf3e7;--text:#2c2c2c;--text-sub:#666;--bg:#fafaf8;--white:#fff;--border:#e5e5e0;--radius:12px;--shadow:rgba(45,122,95,0.08)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg);font-size:18px;line-height:1.9}
+header{background:var(--white);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100}
+.logo-link{text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.logo-text{font-size:20px;font-weight:700;color:var(--green)}
+.logo-sub{font-size:13px;color:var(--text-sub)}
+.wrap{max-width:720px;margin:0 auto;padding:32px 20px 80px}
+.breadcrumb{font-size:14px;color:var(--text-sub);margin-bottom:20px;display:flex;gap:8px;flex-wrap:wrap}
+.breadcrumb a{color:var(--green);text-decoration:none}
+.article-tag{display:inline-block;background:var(--green-light);color:var(--green);font-size:14px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+.article-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,30px);line-height:1.5;margin-bottom:16px}
+.article-lead{font-size:17px;color:var(--text-sub);line-height:1.85;padding:18px 20px;background:var(--green-light);border-left:5px solid var(--green);border-radius:0 8px 8px 0;margin-bottom:36px}
+.article-body h2{font-family:'Noto Serif JP',serif;font-size:22px;color:var(--green);margin:40px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--green-light)}
+.article-body h3{font-size:19px;font-weight:700;margin:24px 0 10px}
+.article-body p{font-size:18px;line-height:1.95;margin-bottom:18px}
+.article-body ul{padding-left:22px;margin-bottom:18px}
+.article-body ul li{font-size:17px;line-height:1.85;margin-bottom:8px}
+.article-box{background:var(--amber-light);border:1px solid #f0c8a0;border-left:5px solid var(--amber);border-radius:0 8px 8px 0;padding:18px 20px;margin:24px 0;font-size:17px;line-height:1.85}
+.article-box strong{color:var(--amber)}
+.article-data{background:#f5f5f3;border-radius:8px;padding:16px 20px;margin:24px 0;font-size:15px;color:var(--text-sub);line-height:1.8}
+.affili-section{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:32px 0;box-shadow:var(--shadow)}
+.affili-section h3{font-size:18px;font-weight:700;color:var(--green-dark);margin-bottom:14px}
+.affili-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.affili-grid{grid-template-columns:1fr}}
+.affili-btn{display:block;text-align:center;text-decoration:none;font-weight:700;font-family:'Noto Sans JP',sans-serif;border-radius:50px;padding:13px 16px;font-size:15px;transition:transform 0.2s,opacity 0.2s}
+.affili-btn:hover{transform:translateY(-1px);opacity:0.92}
+.btn-amazon{background:#FF9900;color:#fff}
+.btn-rakuten{background:#BF0000;color:#fff}
+.related-section{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:32px 0}
+.related-title{font-size:17px;font-weight:700;color:var(--text-sub);margin-bottom:16px;text-align:center}
+.related-grid{display:grid;gap:10px}
+.related-link{display:block;padding:14px 18px;background:#f5f5f3;border-radius:8px;text-decoration:none;color:var(--text);font-size:16px;font-weight:500;border-left:4px solid var(--green);transition:background 0.2s}
+.related-link:hover{background:var(--green-light)}
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:16px;font-weight:700;text-decoration:none;margin-bottom:24px;padding:10px 0}
+.back-btn:hover{text-decoration:underline}
+.back-to-top{position:fixed;bottom:24px;right:20px;background:var(--green);color:#fff;border:none;border-radius:50px;padding:14px 22px;font-size:16px;font-weight:700;font-family:'Noto Sans JP',sans-serif;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:200;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+footer{background:var(--green-dark);color:rgba(255,255,255,0.75);padding:32px 20px;text-align:center;font-size:14px;line-height:2.2}
+footer a{color:rgba(255,255,255,0.65);text-decoration:none}
+.footer-nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn 0.5s ease forwards}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo-link">
+    <div class="logo-mark">💗</div>
+    <div><div class="logo-text">やさしい介護ナビ</div><div class="logo-sub">突然の介護を、一緒に整理しましょう</div></div>
+  </a>
+</header>
+<div class="wrap fade-in">
+  <nav class="breadcrumb"><a href="../index.html">🏠 トップ</a><span>›</span><a href="../index.html#column">コラム</a><span>›</span><span>見守り</span></nav>
+  <a href="../index.html" class="back-btn">← トップページに戻る</a>
+  <div class="article-tag">見守り</div>
+  <h1 class="article-title">離れて暮らす親を見守る——カメラ・センサーの種類と選び方</h1>
+  <div class="article-lead">「突然倒れていたら…」その不安を解消する見守り機器の種類と選び方を解説します。カメラ・センサー・GPS・スマートスピーカー、それぞれの特徴と向いているケースを比較します。</div>
+  <div class="article-body">
+    <h2>見守りの手段は4種類</h2>
+    <ul>
+      <li><strong>見守りカメラ</strong>：室内の様子をスマホからリアルタイムで確認</li>
+      <li><strong>離床センサー・転倒検知</strong>：ベッドから起き上がった・転倒したを自動検知</li>
+      <li><strong>GPS端末</strong>：外出時の位置情報をスマホで確認。認知症の方の見守りに</li>
+      <li><strong>スマートスピーカー・見守り電話</strong>：話しかけるだけで家族と繋がれる</li>
+    </ul>
+
+    <h2>見守りカメラの選び方</h2>
+    <h3>チェックポイント</h3>
+    <ul>
+      <li>Wi-Fi接続でスマホからリアルタイム確認できるか</li>
+      <li>暗視機能（夜間も確認できるか）</li>
+      <li>双方向音声（話しかけられるか）</li>
+      <li>動体検知・アラート機能があるか</li>
+      <li>設置が簡単か（工事不要か）</li>
+    </ul>
+    <div class="article-box">
+      <strong>プライバシーへの配慮を忘れずに</strong><br>
+      見守りカメラを設置する際は、本人に説明して同意を得ることが大切です。「監視」ではなく「安心のために一緒に確認しよう」というスタンスで話し合いましょう。
+    </div>
+    <div class="affili-section">
+      <h3>🛒 見守りカメラ</h3>
+      <div class="affili-grid">
+        <a href="https://www.amazon.co.jp/s?k=見守りカメラ+室内+Wi-Fi&tag=sincere1229-22" rel="nofollow" target="_blank" class="affili-btn btn-amazon">🛒 室内見守りカメラ（Wi-Fi対応）（Amazon）</a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F見守りカメラ%20室内%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="affili-btn btn-rakuten">🛒 室内見守りカメラ（Wi-Fi対応）（楽天）</a>
+        <a href="https://www.amazon.co.jp/s?k=見守りカメラ+双方向音声&tag=sincere1229-22" rel="nofollow" target="_blank" class="affili-btn btn-amazon">🛒 双方向音声付き見守りカメラ（Amazon）</a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fネットワークカメラ%20介護%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="affili-btn btn-rakuten">🛒 双方向音声付き見守りカメラ（楽天）</a>
+      </div>
+    </div>
+
+    <h2>離床センサー・転倒検知センサー</h2>
+    <p>夜間の転倒・ベッドからの落下が心配な場合は、離床センサーが役立ちます。マットタイプ・クリップタイプ・ベルトタイプなど種類があります。</p>
+    <div class="affili-section">
+      <h3>🛒 センサー・転倒検知</h3>
+      <div class="affili-grid">
+        <a href="https://www.amazon.co.jp/s?k=離床センサー+介護&tag=sincere1229-22" rel="nofollow" target="_blank" class="affili-btn btn-amazon">🛒 離床センサー（マットタイプ）（Amazon）</a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F離床センサー%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="affili-btn btn-rakuten">🛒 離床センサー（マットタイプ）（楽天）</a>
+        <a href="https://www.amazon.co.jp/s?k=GPS発信機+高齢者+見守り&tag=sincere1229-22" rel="nofollow" target="_blank" class="affili-btn btn-amazon">🛒 GPS見守り端末（Amazon）</a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FGPS%20高齢者%20見守り%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="affili-btn btn-rakuten">🛒 GPS見守り端末（楽天）</a>
+      </div>
+    </div>
+</div>
+  <div class="related-section">
+    <div class="related-title">📚 関連コラムを読む</div>
+    <div class="related-grid"><a href="kaigo-goods.html" class="related-link">📖 在宅介護を楽にするグッズ15選</a>
+<a href="takushoku.html" class="related-link">📖 介護食・宅配弁当の選び方</a>
+<a href="kaigo-hoken.html" class="related-link">📖 介護保険の申請方法</a>
+<a href="shisetsu.html" class="related-link">📖 施設の種類と費用を比較</a></div>
+  </div>
+  <a href="../index.html" class="back-btn" style="margin-top:16px;">← トップページに戻る</a>
+</div>
+<footer>
+  <div class="footer-nav">
+    <a href="../about.html">運営者情報</a>
+    <a href="https://jikka-navi.net">実家どうするナビ</a>
+    <a href="https://sougi-anshin.net">葬儀ナビ</a>
+    <a href="https://twitter.com/twinklelab_jp">X @twinklelab_jp</a>
+  </div>
+  <div>やさしい介護ナビ｜運営：Twinkle Lab（ぴよ子）</div>
+  <div style="margin-top:4px;">© 2026 やさしい介護ナビ</div>
+</footer>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ トップへ</button>
+<script>window.addEventListener('scroll',function(){const b=document.getElementById('backToTop');b.classList.toggle('visible',window.scrollY>300)});</script>
+</body>
+</html>
