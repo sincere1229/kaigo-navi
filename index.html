@@ -502,12 +502,26 @@ async function callAI(prompt, showAffili = false) {
       })
     });
     const data = await res.json();
-    const text = data.content?.map(b => b.text || '').join('') || 'エラーが発生しました。';
-    txt.textContent = text;
+    console.log('API response:', JSON.stringify(data));
+
+    // レスポンス構造に対応（直接content配列 or エラー）
+    let text = '';
+    if (data.content && Array.isArray(data.content)) {
+      text = data.content.map(b => b.text || '').join('').trim();
+    } else if (data.error) {
+      text = 'AIとの通信でエラーが発生しました：' + (data.error.message || JSON.stringify(data.error));
+    } else if (typeof data === 'string') {
+      text = data;
+    } else {
+      text = JSON.stringify(data);
+    }
+
+    txt.textContent = text || 'AIからの応答を受信できませんでした。';
     footer.style.display = 'block';
     if(showAffili && affili) affili.style.display = 'grid';
   } catch(e) {
-    txt.textContent = 'エラーが発生しました。しばらくしてから再度お試しください。';
+    console.error('fetch error:', e);
+    txt.textContent = 'エラーが発生しました。しばらくしてから再度お試しください。（' + e.message + '）';
   }
 }
 
