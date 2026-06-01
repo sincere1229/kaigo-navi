@@ -3,110 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>やさしい介護ナビ｜突然の介護に悩む家族へ、一緒に整理しましょう</title>
-<meta name="description" content="突然始まる介護で不安な家族へ。介護度・状況・悩みから、今できることをAIと一緒に整理します。介護グッズ・制度・施設・8050問題まで幅広くサポート。登録不要・無料。">
+<title>やさしい介護ナビ｜突然の介護に悩む家族へ、登録不要で一緒に整理</title>
+<meta name="description" content="突然始まる介護で不安な家族へ。メールアドレス・個人情報登録不要。介護度・状況・悩みから、今できることをAIと一緒に整理します。介護グッズ・制度・施設まで幅広くサポート。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green: #2d7a5f;
-  --green-light: #e8f5f0;
-  --green-mid: #4a9e80;
-  --green-dark: #1a5c44;
-  --amber: #c8833a;
-  --amber-light: #fdf3e7;
-  --text: #2c2c2c;
-  --text-sub: #666;
-  --text-light: #999;
-  --bg: #fafaf8;
-  --white: #fff;
-  --border: #e5e5e0;
-  --radius: 12px;
+  --green: #2d7a5f; --green-light: #e8f5f0; --green-mid: #4a9e80; --green-dark: #1a5c44;
+  --amber: #c8833a; --amber-light: #fdf3e7;
+  --text: #2c2c2c; --text-sub: #666; --text-light: #999;
+  --bg: #fafaf8; --white: #fff; --border: #e5e5e0; --radius: 12px;
   --shadow: rgba(45,122,95,0.08);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text);background:var(--bg);line-height:1.8}
+body{font-family:'Noto Sans JP',sans-serif;font-weight:400;color:var(--text);background:var(--bg);line-height:1.85;font-size:18px}
 
 /* HEADER */
 header{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--green-dark);font-weight:600;text-decoration:none}
-.logo span{font-size:12px;display:block;color:var(--text-sub);font-weight:300;font-family:'Noto Sans JP',sans-serif;margin-top:-2px}
-nav{display:flex;gap:20px;font-size:13px}
+.logo{font-family:'Noto Serif JP',serif;font-size:20px;color:var(--green-dark);font-weight:600;text-decoration:none}
+.logo span{font-size:13px;display:block;color:var(--text-sub);font-weight:400;font-family:'Noto Sans JP',sans-serif;margin-top:-2px}
+nav{display:flex;gap:20px;font-size:14px}
 nav a{color:var(--text-sub);text-decoration:none}
 nav a:hover{color:var(--green)}
 
 /* HERO */
 .hero{background:linear-gradient(135deg,#f0f8f4 0%,#fafaf8 60%,#fdf3e7 100%);padding:60px 24px 48px;text-align:center}
-.hero-badge{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:12px;padding:4px 14px;border-radius:20px;margin-bottom:16px;border:1px solid rgba(45,122,95,0.2)}
-.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,34px);font-weight:600;color:var(--green-dark);line-height:1.5;margin-bottom:16px}
-.hero p{font-size:15px;color:var(--text-sub);max-width:560px;margin:0 auto 32px;line-height:2}
+.hero-badge{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:14px;padding:5px 16px;border-radius:20px;margin-bottom:16px;border:1px solid rgba(45,122,95,0.2);font-weight:500}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(24px,4vw,36px);font-weight:600;color:var(--green-dark);line-height:1.5;margin-bottom:16px}
+.hero-sub{font-size:17px;color:var(--text-sub);max-width:580px;margin:0 auto 12px;line-height:1.9}
+.hero-trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0 32px;font-size:15px;color:var(--green-dark)}
+.hero-trust span{display:flex;align-items:center;gap:5px;background:var(--green-light);padding:6px 14px;border-radius:20px;font-weight:500}
+.hero-btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:19px;padding:18px 44px;border-radius:50px;text-decoration:none;box-shadow:0 4px 16px rgba(45,122,95,0.3);transition:transform 0.2s}
+.hero-btn:hover{transform:translateY(-2px)}
+.hero-note{font-size:13px;color:var(--text-sub);margin-top:12px}
+
+/* TRUST BAR */
+.trust{background:var(--white);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+.trust-item{font-size:15px;color:var(--text-sub);display:flex;align-items:center;gap:6px}
 
 /* AI CHAT AREA */
-.ai-section{max-width:700px;margin:0 auto;padding:0 16px 48px}
+.ai-section{max-width:700px;margin:0 auto;padding:40px 16px 48px}
+.ai-section-title{font-family:'Noto Serif JP',serif;font-size:22px;color:var(--green-dark);text-align:center;margin-bottom:20px;font-weight:600}
 .ai-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 24px var(--shadow)}
-.ai-header{background:var(--green);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:10px}
-.ai-header-icon{width:32px;height:32px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
-.ai-header-text h2{font-size:15px;font-weight:500;margin:0}
-.ai-header-text p{font-size:12px;opacity:0.85;margin:0}
-.ai-body{padding:20px}
-.step-label{font-size:12px;color:var(--green);font-weight:500;margin-bottom:8px;margin-top:16px}
+.ai-header{background:var(--green);color:#fff;padding:18px 20px;display:flex;align-items:center;gap:12px}
+.ai-header-icon{width:36px;height:36px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ai-header-text h2{font-size:17px;font-weight:600;margin:0}
+.ai-header-text p{font-size:13px;opacity:0.85;margin:0}
+.ai-body{padding:24px}
+.step-label{font-size:15px;color:var(--green);font-weight:700;margin-bottom:10px;margin-top:20px}
 .step-label:first-child{margin-top:0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}
-.chip{padding:7px 14px;border-radius:20px;border:1px solid var(--border);font-size:13px;cursor:pointer;background:var(--white);color:var(--text);transition:all 0.15s;font-family:'Noto Sans JP',sans-serif}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:4px}
+.chip{padding:10px 18px;border-radius:20px;border:1.5px solid var(--border);font-size:16px;cursor:pointer;background:var(--white);color:var(--text);transition:all 0.15s;font-family:'Noto Sans JP',sans-serif}
 .chip:hover{border-color:var(--green-mid);color:var(--green)}
-.chip.sel{background:var(--green-light);border-color:var(--green);color:var(--green-dark);font-weight:500}
-.concern-area{margin-top:16px}
-.concern-area label{font-size:13px;color:var(--text-sub);display:block;margin-bottom:8px}
-textarea{width:100%;border:1px solid var(--border);border-radius:var(--radius);padding:12px;font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text);resize:none;height:80px;line-height:1.7;background:var(--bg)}
+.chip.sel{background:var(--green-light);border-color:var(--green);color:var(--green-dark);font-weight:700}
+.concern-area{margin-top:20px}
+.concern-area label{font-size:16px;color:var(--text-sub);display:block;margin-bottom:10px}
+textarea{width:100%;border:1.5px solid var(--border);border-radius:var(--radius);padding:14px;font-size:16px;font-family:'Noto Sans JP',sans-serif;color:var(--text);resize:none;height:90px;line-height:1.7;background:var(--bg)}
 textarea:focus{outline:none;border-color:var(--green-mid)}
-.btn-ask{width:100%;margin-top:16px;padding:14px;background:var(--green);color:#fff;border:none;border-radius:var(--radius);font-size:15px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;font-weight:500;transition:background 0.2s}
+.btn-ask{width:100%;margin-top:18px;padding:16px;background:var(--green);color:#fff;border:none;border-radius:var(--radius);font-size:18px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;font-weight:700;transition:background 0.2s}
 .btn-ask:hover{background:var(--green-dark)}
 .btn-ask:disabled{opacity:0.5;cursor:not-allowed}
-
-/* UGOCHI BOX */
-.ugochi-btn{width:100%;margin-top:10px;padding:11px;background:var(--white);color:var(--amber);border:1px solid var(--amber);border-radius:var(--radius);font-size:14px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;transition:all 0.2s}
+.ugochi-btn{width:100%;margin-top:12px;padding:14px;background:var(--white);color:var(--amber);border:1.5px solid var(--amber);border-radius:var(--radius);font-size:16px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;transition:all 0.2s}
 .ugochi-btn:hover{background:var(--amber-light)}
 
-.response-wrap{display:none;margin-top:16px;border-top:1px solid var(--border);padding-top:16px}
-.response-label{font-size:12px;color:var(--green);font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.response-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block}
-.response-text{font-size:14px;line-height:2;color:var(--text);white-space:pre-wrap}
-.response-footer{margin-top:16px;padding:12px;background:var(--green-light);border-radius:var(--radius);font-size:12px;color:var(--green-dark);line-height:1.8}
+.response-wrap{display:none;margin-top:20px;border-top:1px solid var(--border);padding-top:20px}
+.response-label{font-size:15px;color:var(--green);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.response-label::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}
+.response-text{font-size:17px;line-height:2;color:var(--text);white-space:pre-wrap}
+.response-footer{margin-top:18px;padding:14px;background:var(--green-light);border-radius:var(--radius);font-size:15px;color:var(--green-dark);line-height:1.85}
+
+/* AI後のアフィリリンク */
+.ai-affili{margin-top:20px;display:grid;gap:12px}
+.ai-affili-title{font-size:15px;font-weight:700;color:var(--text-sub);margin-bottom:4px;text-align:center}
+.ai-affili-btn{display:block;text-decoration:none;font-weight:700;font-family:'Noto Sans JP',sans-serif;border-radius:50px;padding:14px 18px;font-size:16px;text-align:center;transition:transform 0.2s,opacity 0.2s;border:none;cursor:pointer}
+.ai-affili-btn:hover{transform:translateY(-1px);opacity:0.92}
+.btn-amazon{background:#FF9900;color:#fff}
+.btn-rakuten{background:#BF0000;color:#fff}
+.btn-green{background:var(--green);color:#fff}
+
+/* アフィリセクション（AI結果後） */
+.affili-section{max-width:700px;margin:0 auto;padding:0 16px 40px}
+.affili-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:16px}
+.affili-card-title{font-size:17px;font-weight:700;color:var(--green-dark);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.affili-card-desc{font-size:15px;color:var(--text-sub);margin-bottom:14px;line-height:1.75}
+.affili-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.affili-grid{grid-template-columns:1fr}}
+
+/* カテゴリ */
+.section{max-width:1000px;margin:0 auto;padding:40px 20px}
+.section-title{font-family:'Noto Serif JP',serif;font-size:24px;color:var(--green-dark);margin-bottom:8px;font-weight:600}
+.section-sub{font-size:16px;color:var(--text-sub);margin-bottom:28px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.cat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 18px;text-decoration:none;color:var(--text);transition:all 0.2s;display:block}
+.cat-card:hover{border-color:var(--green-mid);box-shadow:0 4px 16px var(--shadow);transform:translateY(-2px)}
+.cat-icon{font-size:28px;margin-bottom:12px}
+.cat-name{font-size:17px;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+.cat-desc{font-size:14px;color:var(--text-sub);line-height:1.6}
+.cat-tag{display:inline-block;margin-top:10px;font-size:12px;background:var(--amber-light);color:var(--amber);padding:3px 10px;border-radius:10px;font-weight:500}
+
+/* コラムセクション */
+.column-section{max-width:700px;margin:0 auto;padding:0 16px 48px}
+.column-section-title{font-family:'Noto Serif JP',serif;font-size:22px;color:var(--green-dark);margin-bottom:8px;font-weight:600;text-align:center}
+.column-section-sub{font-size:16px;color:var(--text-sub);text-align:center;margin-bottom:24px}
+.column-grid{display:grid;gap:16px}
+.column-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.column-tag{display:inline-block;background:var(--green-light);color:var(--green);font-size:13px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px}
+.column-card h3{font-size:18px;font-weight:700;margin-bottom:8px;line-height:1.5;cursor:pointer;color:var(--green-dark)}
+.column-card h3:hover{text-decoration:underline}
+.column-card p{font-size:15px;color:var(--text-sub);line-height:1.75;margin-bottom:14px}
+.read-more-btn{display:block;text-align:center;text-decoration:none;font-weight:700;font-family:'Noto Sans JP',sans-serif;border-radius:50px;padding:12px 20px;font-size:16px;background:var(--green-light);color:var(--green);border:2px solid var(--green);transition:all 0.2s}
+.read-more-btn:hover{background:var(--green);color:#fff}
+
+/* 書籍セクション */
+.books-section{max-width:700px;margin:0 auto;padding:0 16px 48px}
+.books-card{background:linear-gradient(135deg,#fff8e1,#fff3cd);border:1px solid #ffc107;border-radius:var(--radius);padding:24px;text-align:center}
+.books-card h3{font-size:19px;font-weight:700;margin-bottom:8px;color:#856404}
+.books-card p{font-size:16px;color:#6b5a00;margin-bottom:16px;line-height:1.7}
+.books-btn{display:inline-block;background:#FF9900;color:#fff;font-weight:700;font-size:17px;padding:14px 32px;border-radius:50px;text-decoration:none;transition:transform 0.2s}
+.books-btn:hover{transform:translateY(-1px)}
+
+/* 免責・アフィリ開示 */
+.affili-note{max-width:700px;margin:0 auto 24px;padding:0 16px}
+.affili-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;font-size:14px;color:var(--text-light);line-height:1.85}
+.disclaimer{max-width:700px;margin:0 auto 20px;padding:0 16px}
+.disclaimer-box{background:var(--green-light);border-radius:var(--radius);padding:16px 20px;font-size:14px;color:var(--green-dark);line-height:1.85;border-left:3px solid var(--green)}
+
+/* FOOTER */
+footer{background:var(--green-dark);color:rgba(255,255,255,0.75);padding:36px 24px;text-align:center;font-size:15px;line-height:2.2}
+footer a{color:rgba(255,255,255,0.65);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.footer-nav{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:14px}
+
+/* TOPへ戻るボタン */
+.back-to-top{position:fixed;bottom:24px;right:20px;background:var(--green);color:#fff;border:none;border-radius:50px;padding:14px 22px;font-size:16px;font-weight:700;font-family:'Noto Sans JP',sans-serif;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:200;opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.2s}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+.back-to-top:hover{transform:translateY(-2px)}
+
 .loading-dots span{animation:blink 1.2s infinite}
 .loading-dots span:nth-child(2){animation-delay:0.2s}
 .loading-dots span:nth-child(3){animation-delay:0.4s}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn 0.5s ease forwards}
 
-/* CATEGORY SECTION */
-.section{max-width:1000px;margin:0 auto;padding:40px 20px}
-.section-title{font-family:'Noto Serif JP',serif;font-size:20px;color:var(--green-dark);margin-bottom:8px;font-weight:600}
-.section-sub{font-size:13px;color:var(--text-sub);margin-bottom:24px}
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.cat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:var(--text);transition:all 0.2s;display:block}
-.cat-card:hover{border-color:var(--green-mid);box-shadow:0 4px 16px var(--shadow);transform:translateY(-2px)}
-.cat-icon{font-size:24px;margin-bottom:10px}
-.cat-name{font-size:14px;font-weight:500;color:var(--green-dark);margin-bottom:4px}
-.cat-desc{font-size:12px;color:var(--text-sub);line-height:1.6}
-.cat-tag{display:inline-block;margin-top:8px;font-size:11px;background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:10px}
-
-/* AFFILI NOTE */
-.affili-note{max-width:700px;margin:0 auto 40px;padding:0 16px}
-.affili-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;font-size:12px;color:var(--text-light);line-height:1.8}
-
-/* DISCLAIMER */
-.disclaimer{max-width:700px;margin:0 auto 20px;padding:0 16px}
-.disclaimer-box{background:var(--green-light);border-radius:var(--radius);padding:14px 18px;font-size:12px;color:var(--green-dark);line-height:1.8;border-left:3px solid var(--green)}
-
-/* FOOTER */
-footer{background:var(--green-dark);color:rgba(255,255,255,0.7);padding:32px 24px;text-align:center;font-size:12px;line-height:2}
-footer a{color:rgba(255,255,255,0.6);text-decoration:none}
-
-/* RESPONSIVE */
 @media(max-width:600px){
   nav{display:none}
   .hero{padding:40px 16px 32px}
   .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-trust{gap:10px}
 }
 </style>
 </head>
@@ -115,26 +160,48 @@ footer a{color:rgba(255,255,255,0.6);text-decoration:none}
 <header>
   <a href="/" class="logo">やさしい介護ナビ<span>突然の介護を、一緒に整理しましょう</span></a>
   <nav>
-    <a href="#categories">カテゴリ</a>
     <a href="#ai-consult">AI相談</a>
+    <a href="#categories">カテゴリ</a>
+    <a href="#column">コラム</a>
     <a href="#disclaimer">免責</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">無料・登録不要・AI相談</div>
+  <div class="hero-badge">📋 メールアドレス・個人情報の登録一切不要</div>
   <h1>介護は、突然始まります。<br>一人で抱え込まないでください。</h1>
-  <p>状況を教えていただければ、AIが今できることを一緒に整理します。<br>正解を押しつけず、あなたのペースで。</p>
+  <p class="hero-sub">
+    状況を選ぶだけで、AIが今できることを一緒に整理します。<br>
+    正解を押しつけず、あなたのペースで。
+  </p>
+  <div class="hero-trust">
+    <span>✅ 登録不要</span>
+    <span>✅ 個人情報不要</span>
+    <span>✅ 電話営業なし</span>
+    <span>✅ 24時間いつでも</span>
+  </div>
+  <a href="#ai-consult" class="hero-btn">▶ 今すぐAIに相談する</a>
+  <div class="hero-note">施設紹介・勧誘は一切行いません</div>
 </section>
 
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-item">🤝 施設への勧誘なし</div>
+  <div class="trust-item">⚖️ 中立・公平な情報提供</div>
+  <div class="trust-item">💚 介護者の気持ちに寄り添う</div>
+  <div class="trust-item">🏛️ 地域包括支援センターへの案内あり</div>
+</div>
+
 <!-- AI相談エリア -->
-<div class="ai-section" id="ai-consult">
+<div class="ai-section fade-in" id="ai-consult">
+  <div class="ai-section-title">🤝 AI相談窓口</div>
   <div class="ai-card">
     <div class="ai-header">
-      <div class="ai-header-icon">🤝</div>
+      <div class="ai-header-icon">💗</div>
       <div class="ai-header-text">
-        <h2>AI相談窓口</h2>
-        <p>状況を選んで、悩みを教えてください</p>
+        <h2>状況を選んで相談してください</h2>
+        <p>あなたのペースで、今できることを一緒に整理します</p>
       </div>
     </div>
     <div class="ai-body">
@@ -167,19 +234,89 @@ footer a{color:rgba(255,255,255,0.6);text-decoration:none}
         <textarea id="concern" placeholder="例：夜中に何度も起きて呼ばれます。自分が疲れ果てていて、もう限界かもしれません…"></textarea>
       </div>
 
-      <button class="btn-ask" id="btn-ask" onclick="askAI()">AIに相談する</button>
+      <button class="btn-ask" id="btn-ask" onclick="askAI()">💗 AIに相談する</button>
       <button class="ugochi-btn" id="btn-ugochi" onclick="ugochi()">😔 もう疲れた・限界かも…という方はこちら</button>
 
       <div class="response-wrap" id="response-wrap">
         <div class="response-label">AIからのご提案</div>
         <div class="response-text" id="response-text"></div>
         <div class="response-footer" id="response-footer" style="display:none">
-          📍 <strong>地域包括支援センター</strong>に相談することもできます。お住まいの市区町村の窓口に無料で相談可能です。「地域包括支援センター ＋ お住まいの地域名」で検索してみてください。<br>
-          ※ このサービスはAIによる情報提供です。医療・介護の専門的な判断は専門家にご相談ください。
+          📍 <strong>地域包括支援センター</strong>に無料で相談できます。「地域包括支援センター ＋ お住まいの地域名」で検索してみてください。<br>
+          ※ AIによる一般的な情報提供です。医療・介護の専門的な判断は専門家にご相談ください。
+        </div>
+        <!-- AI相談後のアフィリリンク -->
+        <div class="ai-affili" id="ai-affili" style="display:none">
+          <div class="ai-affili-title">💡 合わせて確認しておきたいサービス</div>
+          <a href="https://www.amazon.co.jp/s?k=介護用品+セット&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon">🛒 介護グッズをAmazonで探す</a>
+          <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fwww.rakuten.co.jp%2F&link_type=text" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten">🛒 介護グッズを楽天で探す</a>
+          <a href="column/kaigo-goods.html" class="ai-affili-btn btn-green">📖 在宅介護グッズの選び方を読む</a>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- アフィリエイト商品エリア（状況別） -->
+<div class="affili-section">
+
+  <!-- 介護グッズ -->
+  <div class="affili-card">
+    <div class="affili-card-title">🛏️ 在宅介護を楽にするグッズ</div>
+    <div class="affili-card-desc">手すり・介護ベッド・おむつ・車椅子など、自宅での介護を安全・快適にするグッズをまとめました。</div>
+    <div class="affili-grid">
+      <a href="https://www.amazon.co.jp/s?k=介護用手すり&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 手すり・転倒防止（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F介護用手すり%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 手すり・転倒防止（楽天）</a>
+      <a href="https://www.amazon.co.jp/s?k=介護ベッド+柵&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 介護ベッド・サイドレール（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F介護ベッド%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 介護ベッド・サイドレール（楽天）</a>
+      <a href="https://www.amazon.co.jp/s?k=大人用紙おむつ&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 おむつ・尿取りパッド（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F大人用おむつ%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 おむつ・尿取りパッド（楽天）</a>
+    </div>
+  </div>
+
+  <!-- 見守りカメラ -->
+  <div class="affili-card">
+    <div class="affili-card-title">📷 見守りカメラ・センサー</div>
+    <div class="affili-card-desc">離れて暮らす親の様子を確認できる見守りカメラ・センサー。スマホから確認できるWi-Fi対応タイプが人気です。</div>
+    <div class="affili-grid">
+      <a href="https://www.amazon.co.jp/s?k=見守りカメラ+室内+スマホ&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 見守りカメラ（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F見守りカメラ%20室内%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 見守りカメラ（楽天）</a>
+      <a href="https://www.amazon.co.jp/s?k=介護センサー+離床&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 離床センサー・転倒検知（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F離床センサー%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 離床センサー・転倒検知（楽天）</a>
+    </div>
+  </div>
+
+  <!-- シニアスマホ -->
+  <div class="affili-card">
+    <div class="affili-card-title">📱 シニア向けスマホ・タブレット</div>
+    <div class="affili-card-desc">文字が大きい・操作が簡単なシニア向けスマホ・タブレット。離れていても顔を見て話せるビデオ通話に便利です。</div>
+    <div class="affili-grid">
+      <a href="https://www.amazon.co.jp/s?k=シニア向けタブレット&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 シニア向けタブレット（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fシニア向けタブレット%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 シニア向けタブレット（楽天）</a>
+    </div>
+  </div>
+
+  <!-- 介護食・宅食 -->
+  <div class="affili-card">
+    <div class="affili-card-title">🍱 介護食・宅配弁当</div>
+    <div class="affili-card-desc">やわらか食・塩分控えめ・栄養バランス対応の宅配弁当。毎日の食事の準備が楽になります。A8提携後に更新予定。</div>
+    <div class="affili-grid">
+      <a href="https://www.amazon.co.jp/s?k=介護食+レトルト&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 介護食・レトルト（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F介護食%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 介護食・レトルト（楽天）</a>
+    </div>
+  </div>
+
+  <!-- 終活・エンディングノート -->
+  <div class="affili-card">
+    <div class="affili-card-title">📖 終活・エンディングノート</div>
+    <div class="affili-card-desc">介護が始まったら、元気なうちに本人の希望を記録しておくことが大切です。遺言・相続・葬儀の希望を整理できます。</div>
+    <div class="affili-grid">
+      <a href="https://www.amazon.co.jp/s?k=エンディングノート&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">🛒 エンディングノート（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fエンディングノート%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">🛒 エンディングノート（楽天）</a>
+      <a href="https://www.amazon.co.jp/s?k=介護+準備+本&tag=sincere1229-22" rel="nofollow" target="_blank" class="ai-affili-btn btn-amazon" style="font-size:15px;padding:12px;">📚 介護の準備本（Amazon）</a>
+      <a href="https://hb.afl.rakuten.co.jp/ichiba/5460b4b0.d6b4f3ad.5460b4b1.58633ff3/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F介護%20準備%2F&link_type=text&ut=eyJwYWdlIjoic2VhcmNoIn0%3D" rel="nofollow" target="_blank" class="ai-affili-btn btn-rakuten" style="font-size:15px;padding:12px;">📚 介護の準備本（楽天）</a>
+    </div>
+  </div>
+
 </div>
 
 <!-- カテゴリ -->
@@ -187,31 +324,31 @@ footer a{color:rgba(255,255,255,0.6);text-decoration:none}
   <div class="section-title">カテゴリから探す</div>
   <div class="section-sub">状況に合わせて、必要な情報を探してみてください</div>
   <div class="cat-grid">
-    <a href="#" class="cat-card">
+    <a href="column/kaigo-goods.html" class="cat-card">
       <div class="cat-icon">🛏️</div>
       <div class="cat-name">介護グッズ・用品</div>
       <div class="cat-desc">ベッド・手すり・おむつ・車椅子など在宅介護を楽にするグッズ</div>
       <span class="cat-tag">Amazon・楽天</span>
     </a>
-    <a href="#" class="cat-card">
+    <a href="column/mimamori.html" class="cat-card">
       <div class="cat-icon">📷</div>
       <div class="cat-name">見守りカメラ・センサー</div>
       <div class="cat-desc">離れて暮らす親の安全を確認できる見守り機器の選び方</div>
       <span class="cat-tag">Amazon・楽天</span>
     </a>
-    <a href="#" class="cat-card">
+    <a href="column/takushoku.html" class="cat-card">
       <div class="cat-icon">🍱</div>
       <div class="cat-name">宅食・介護食</div>
       <div class="cat-desc">やわらか食・塩分控えめ・栄養バランス対応の宅配弁当サービス</div>
-      <span class="cat-tag">A8アフィリ</span>
+      <span class="cat-tag">宅食サービス</span>
     </a>
-    <a href="#" class="cat-card">
+    <a href="column/senior-smartphone.html" class="cat-card">
       <div class="cat-icon">📱</div>
       <div class="cat-name">シニアスマホ・タブレット</div>
       <div class="cat-desc">高齢の親が使いやすいスマホ・タブレットと設定サポート</div>
       <span class="cat-tag">Amazon・楽天</span>
     </a>
-    <a href="#" class="cat-card">
+    <a href="column/kaigo-hoken.html" class="cat-card">
       <div class="cat-icon">📋</div>
       <div class="cat-name">介護保険・制度</div>
       <div class="cat-desc">申請方法・負担限度額・高額介護合算など制度をわかりやすく解説</div>
@@ -221,19 +358,19 @@ footer a{color:rgba(255,255,255,0.6);text-decoration:none}
       <div class="cat-icon">🏠</div>
       <div class="cat-name">在宅介護サービス</div>
       <div class="cat-desc">訪問介護・デイサービス・ショートステイの選び方と費用</div>
-      <span class="cat-tag">A8アフィリ</span>
+      <span class="cat-tag">準備中</span>
     </a>
     <a href="#" class="cat-card">
       <div class="cat-icon">🛡️</div>
       <div class="cat-name">介護保険・生命保険</div>
       <div class="cat-desc">もしもの時に備える保険の選び方・無料相談窓口のご案内</div>
-      <span class="cat-tag">A8アフィリ</span>
+      <span class="cat-tag">準備中</span>
     </a>
     <a href="#" class="cat-card">
       <div class="cat-icon">💼</div>
       <div class="cat-name">介護職・転職サポート</div>
       <div class="cat-desc">介護の仕事に就きたい方・転職を考えている方へ</div>
-      <span class="cat-tag">A8アフィリ</span>
+      <span class="cat-tag">準備中</span>
     </a>
     <a href="#" class="cat-card">
       <div class="cat-icon">🔖</div>
@@ -245,42 +382,96 @@ footer a{color:rgba(255,255,255,0.6);text-decoration:none}
       <div class="cat-icon">🏡</div>
       <div class="cat-name">8050問題・ひきこもり</div>
       <div class="cat-desc">8050問題・ひきこもり家族の介護・自立支援・相談窓口</div>
-      <span class="cat-tag">A8・情報記事</span>
+      <span class="cat-tag">準備中</span>
     </a>
     <a href="#" class="cat-card">
       <div class="cat-icon">💚</div>
       <div class="cat-name">介護者のメンタルケア</div>
       <div class="cat-desc">介護疲れ・罪悪感・イライラ…あなた自身を大切にするために</div>
-      <span class="cat-tag">A8アフィリ</span>
+      <span class="cat-tag">準備中</span>
     </a>
     <a href="#" class="cat-card">
       <div class="cat-icon">🤖</div>
       <div class="cat-name">介護×AI・便利サービス</div>
       <div class="cat-desc">AIを使った見守り・話し相手・健康管理など最新サービス紹介</div>
-      <span class="cat-tag">Amazon・A8</span>
+      <span class="cat-tag">準備中</span>
     </a>
+  </div>
+</div>
+
+<!-- コラムセクション -->
+<div class="column-section" id="column">
+  <div class="column-section-title">📚 介護コラム</div>
+  <div class="column-section-sub">介護の悩みを解決するコラムを順次追加しています</div>
+  <div class="column-grid">
+    <div class="column-card">
+      <span class="column-tag">介護グッズ</span>
+      <h3 onclick="location.href='column/kaigo-goods.html'">在宅介護を楽にするグッズ15選——選び方と注意点 →</h3>
+      <p>手すり・介護ベッド・おむつ・車椅子……何から揃えればいいか迷う方へ。状況別におすすめグッズを解説します。</p>
+      <a href="column/kaigo-goods.html" class="read-more-btn">📖 続きを読む</a>
+    </div>
+    <div class="column-card">
+      <span class="column-tag">見守り</span>
+      <h3 onclick="location.href='column/mimamori.html'">離れて暮らす親を見守る——カメラ・センサーの選び方 →</h3>
+      <p>「突然倒れていたら…」その不安を解消する見守り機器の種類と選び方。スマホで確認できるWi-Fi対応タイプを比較します。</p>
+      <a href="column/mimamori.html" class="read-more-btn">📖 続きを読む</a>
+    </div>
+    <div class="column-card">
+      <span class="column-tag">宅食・介護食</span>
+      <h3 onclick="location.href='column/takushoku.html'">介護食・宅配弁当の選び方——やわらか食・塩分制限対応を比較 →</h3>
+      <p>毎日の食事準備が大変な方へ。介護食・宅配弁当サービスの種類と選び方を解説します。</p>
+      <a href="column/takushoku.html" class="read-more-btn">📖 続きを読む</a>
+    </div>
+    <div class="column-card">
+      <span class="column-tag">介護保険</span>
+      <h3 onclick="location.href='column/kaigo-hoken.html'">介護保険の申請方法——認定の流れと負担額をわかりやすく解説 →</h3>
+      <p>「介護保険ってどうやって使うの？」申請から認定・サービス利用までの流れをステップで解説します。</p>
+      <a href="column/kaigo-hoken.html" class="read-more-btn">📖 続きを読む</a>
+    </div>
+    <div class="column-card">
+      <span class="column-tag">介護施設</span>
+      <h3 onclick="location.href='column/shisetsu.html'">特養・有料老人ホーム・グループホーム——施設の種類と費用を比較 →</h3>
+      <p>「どんな施設があるの？」「費用はどのくらい？」施設の種類・特徴・費用をわかりやすく比較します。</p>
+      <a href="column/shisetsu.html" class="read-more-btn">📖 続きを読む</a>
+    </div>
+  </div>
+</div>
+
+<!-- 書籍セクション -->
+<div class="books-section">
+  <div class="books-card">
+    <h3>📚 介護・終活のおすすめ書籍</h3>
+    <p>介護の準備・制度・施設選びに役立つ本をAmazon・楽天で探せます。</p>
+    <a href="https://www.amazon.co.jp/s?k=介護+準備+本+初めて&tag=sincere1229-22" rel="nofollow" target="_blank" class="books-btn">🛒 Amazonで介護本を探す</a>
   </div>
 </div>
 
 <!-- アフィリエイト開示 -->
 <div class="affili-note">
   <div class="affili-box">
-    📢 <strong>アフィリエイト開示</strong>：当サイトは一部のリンクにアフィリエイト広告（Amazon・楽天市場・A8.net等）を含む場合があります。紹介料はサイト運営に充てられますが、掲載内容の公正性には影響しません。あなたの状況に合った情報提供を最優先にしています。
+    📢 <strong>アフィリエイト開示</strong>：当サイトはAmazon・楽天市場・A8.netのアフィリエイトプログラムに参加しています。リンク経由でご購入いただいた場合、当サイトに紹介料が発生することがありますが、掲載内容の公正性には影響しません。
   </div>
 </div>
 
 <!-- 免責 -->
 <div class="disclaimer" id="disclaimer">
   <div class="disclaimer-box">
-    ⚠️ <strong>免責事項</strong>：当サイトのAI相談および記事は、一般的な情報提供を目的としています。医療・介護の専門的な判断は、かかりつけ医・ケアマネジャー・地域包括支援センターにご相談ください。個別の状況により最適な選択は異なります。「〜の傾向があります」「〜の可能性があります」という表現は断定ではありません。
+    ⚠️ <strong>免責事項</strong>：当サイトのAI相談および記事は、一般的な情報提供を目的としています。医療・介護の専門的な判断は、かかりつけ医・ケアマネジャー・地域包括支援センターにご相談ください。個別の状況により最適な選択は異なります。
   </div>
 </div>
 
 <footer>
+  <div class="footer-nav">
+    <a href="about.html">運営者情報</a>
+    <a href="https://jikka-navi.net">実家どうするナビ</a>
+    <a href="https://sougi-anshin.net">葬儀ナビ</a>
+    <a href="https://twitter.com/twinklelab_jp">X @twinklelab_jp</a>
+  </div>
   <div>やさしい介護ナビ｜突然の介護に悩む家族へ</div>
-  <div style="margin-top:8px"><a href="#">プライバシーポリシー</a>　<a href="#">お問い合わせ</a></div>
-  <div style="margin-top:8px;font-size:11px">© 2026 やさしい介護ナビ. Powered by Twinkle Lab</div>
+  <div style="margin-top:6px;">運営：Twinkle Lab（ぴよ子）｜© 2026 やさしい介護ナビ</div>
 </footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ トップへ</button>
 
 <script>
 const sel = {};
@@ -291,13 +482,15 @@ function pick(el, group) {
   sel[group] = el.textContent.trim();
 }
 
-async function callAI(prompt) {
+async function callAI(prompt, showAffili = false) {
   const wrap = document.getElementById('response-wrap');
   const txt = document.getElementById('response-text');
   const footer = document.getElementById('response-footer');
+  const affili = document.getElementById('ai-affili');
   wrap.style.display = 'block';
   txt.innerHTML = '<span class="loading-dots"><span>●</span><span>●</span><span>●</span></span> AIが考えています…';
   footer.style.display = 'none';
+  if(affili) affili.style.display = 'none';
 
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -307,7 +500,7 @@ async function callAI(prompt) {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 1000,
         messages: [{ role: 'user', content: prompt }]
       })
@@ -316,6 +509,7 @@ async function callAI(prompt) {
     const text = data.content?.map(b => b.text || '').join('') || 'エラーが発生しました。';
     txt.textContent = text;
     footer.style.display = 'block';
+    if(showAffili && affili) affili.style.display = 'grid';
   } catch(e) {
     txt.textContent = 'エラーが発生しました。しばらくしてから再度お試しください。';
   }
@@ -324,7 +518,6 @@ async function callAI(prompt) {
 async function askAI() {
   const concern = document.getElementById('concern').value.trim();
   if (!concern) { alert('相談内容を入力してください'); return; }
-
   document.getElementById('btn-ask').disabled = true;
 
   const relation = sel['rel'] || '未回答';
@@ -351,7 +544,7 @@ async function askAI() {
 
 温かく、落ち着いたトーンで、今できることを整理してください。`;
 
-  await callAI(prompt);
+  await callAI(prompt, true);
   document.getElementById('btn-ask').disabled = false;
 }
 
@@ -373,9 +566,16 @@ async function ugochi() {
 
 介護で限界を感じているこの方への言葉をください。`;
 
-  await callAI(prompt);
+  await callAI(prompt, false);
   document.getElementById('btn-ugochi').disabled = false;
 }
+
+// TOPへ戻るボタン
+window.addEventListener('scroll', function() {
+  const btn = document.getElementById('backToTop');
+  if (window.scrollY > 300) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
 </script>
 </body>
 </html>
