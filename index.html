@@ -554,7 +554,13 @@ async function callAI(prompt, showAffili = false) {
       text = JSON.stringify(data);
     }
 
-    txt.textContent = text || 'AIからの応答を受信できませんでした。';
+    const formatted = (text || 'AIからの応答を受信できませんでした。')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/^## (.+)$/gm, '<h4 style="color:var(--green);margin:14px 0 6px;font-size:16px;">$1</h4>')
+      .replace(/^### (.+)$/gm, '<strong style="display:block;margin:10px 0 4px;">$1</strong>')
+      .replace(/^- (.+)$/gm, '・$1')
+      .replace(/\n/g, '<br>');
+    txt.innerHTML = formatted;
     footer.style.display = 'block';
     if(showAffili && affili) affili.style.display = 'grid';
   } catch(e) {
@@ -582,6 +588,7 @@ async function askAI() {
 - 「今できる小さな一歩」を必ず提示する
 - 専門用語は噛み砕く
 - 300〜400文字でまとめる
+- マークダウン記法（**太字**・##見出し・-リスト）は使わずプレーンテキストで回答する
 - 最後に地域包括支援センターへの案内を一言添える
 
 【相談者の状況】
